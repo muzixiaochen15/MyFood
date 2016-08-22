@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RNFrostedSidebar.h"
+#import "EQXTabbarController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<RNFrostedSidebarDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *MainPageTableView;
 
 @end
 

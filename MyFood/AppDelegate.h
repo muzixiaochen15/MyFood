@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define WIDTH_OF_SCREEN CGRectGetWidth([UIScreen mainScreen].bounds)
+#define HEIGHT_OF_SCREEN  CGRectGetHeight([UIScreen mainScreen].bounds)
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
