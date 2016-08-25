@@ -80,7 +80,7 @@
 
 -(void)dealloc
 {
-    self.assets = nil;
+//    self.assets = nil;
     self.selectAssets = nil;
     self.collectionView.delegate = nil;
     self.collectionView.dataSource = nil;
@@ -284,7 +284,7 @@
 
 #ifdef __IPHONE_9_0
 
-#warning 会出现内存泄露，临时不使用
+//#warning 会出现内存泄露，临时不使用
 - (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
 {
     //获取当前cell的indexPath

@@ -16,7 +16,7 @@
 
 @implementation PhotoGroupViewController
 - (void)dealloc{
-    self.groups = nil;
+//    self.groups = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

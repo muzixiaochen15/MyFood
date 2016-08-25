@@ -26,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addNavBarButtonItem];
+    [self addSubLabel];
     [self.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     CGFloat sizeHeight = (CGRectGetWidth(self.view.frame) - 3)/3.0f;
     assetSize = CGSizeMake(sizeHeight, sizeHeight);
     [self.view addSubview:self.collectionView];
@@ -38,6 +40,15 @@
         else
             NSLog(@"not exist!");
     }];
+}
+- (void)addSubLabel{
+    UILabel *subLabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.view.frame) - 40.0f, 40.0f)];
+    subLabel.center = self.view.center;
+    subLabel.backgroundColor = [UIColor clearColor];
+    subLabel.textAlignment = NSTextAlignmentCenter;
+    subLabel.textColor = [EQXColor colorWithHexString:@"#e8e8e8"];
+    subLabel.text = @"相册中选取的图片，支持多选";
+    [self.view addSubview:subLabel];
 }
 - (void)addNavBarButtonItem{
     UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -60,6 +71,7 @@
        textField.placeholder = @"新建相册名字";
     }];
     __weak typeof(alertController) weakAlert = alertController;
+    //apple使用了block代替了delegate
     [alertController addAction:[UIAlertAction  actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //获得textFiled
         UITextField * textField = weakAlert.textFields.firstObject;
@@ -107,6 +119,17 @@
     }
     return _collectionView;
 }
+#if 0
+- (HintHouse *)hintHouse{
+    if (!hintHouse) {
+        hintHouse = [[HintHouse alloc]init];
+        hintHouse.size = 99.0f;
+        hintHouse.price = 1500.0f;
+        hintHouse.location = LocationTypeNearMetro;
+    }
+    return hintHouse;
+}
+#endif
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

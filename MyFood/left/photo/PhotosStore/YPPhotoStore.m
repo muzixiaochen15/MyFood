@@ -48,7 +48,6 @@ typedef void(^PHAssetCollectionBlock)(NSArray<PHAssetCollection *> * groups);
     
     return self;
 }
-
 +(instancetype)storeWithConfiguration:(YPPhotoStoreConfiguraion *)configuration
 {
     return [[self alloc] initWithConfiguration:configuration];

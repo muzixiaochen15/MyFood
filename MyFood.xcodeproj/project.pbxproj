@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B2C23F61D6A9C56002A30B9 /* YPPhotos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C23F51D6A9C56002A30B9 /* YPPhotos.xcassets */; };
 		6B2CAECB1D59793D0007A131 /* biaoqingku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAECA1D59793D0007A131 /* biaoqingku@2x.png */; };
 		6B2CAEDF1D597FF80007A131 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAECE1D597FF80007A131 /* blackArrow.png */; };
 		6B2CAEE01D597FF80007A131 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAECF1D597FF80007A131 /* blackArrow@2x.png */; };
@@ -23,15 +24,20 @@
 		6B2CAEEB1D597FF80007A131 /* EGORefreshTablLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAEDD1D597FF80007A131 /* EGORefreshTablLeftView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B2CAEF31D59B98E0007A131 /* cryingFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */; };
 		6B2CAEF71D59C4350007A131 /* 背景图@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF61D59C4350007A131 /* 背景图@2x.png */; };
+		6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */; };
+		6B56A1841D6E7F0200B1C3BC /* MFConstUrlClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B56A1831D6E7F0200B1C3BC /* MFConstUrlClass.m */; };
 		6B67CFFF1D547EEB0011AF01 /* EQXDataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67CFFE1D547EEB0011AF01 /* EQXDataUtils.m */; };
 		6B67D0021D5480CD0011AF01 /* NetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67D0011D5480CD0011AF01 /* NetworkInfo.m */; };
 		6B67D0051D54896D0011AF01 /* EQXTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67D0041D54896D0011AF01 /* EQXTabbarController.m */; };
 		6B67D0091D548B2B0011AF01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B67D0081D548B2B0011AF01 /* Assets.xcassets */; };
 		6B67D00C1D5495D40011AF01 /* EQXColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67D00B1D5495D40011AF01 /* EQXColor.m */; };
+		6B764AD41D6C00350039CB44 /* MemoryManagementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B764AD31D6C00350039CB44 /* MemoryManagementController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6B764AD71D6C00DF0039CB44 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B764AD61D6C00DF0039CB44 /* Person.m */; };
 		6B7919131D5ADC59003B301F /* 升级弹窗背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7919111D5ADC59003B301F /* 升级弹窗背景@2x.png */; };
 		6B7919141D5ADC59003B301F /* 升级弹窗背景@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7919121D5ADC59003B301F /* 升级弹窗背景@3x.png */; };
 		6B7919171D5AFA66003B301F /* 关闭@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7919151D5AFA66003B301F /* 关闭@2x.png */; };
 		6B7919181D5AFA66003B301F /* 关闭@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7919161D5AFA66003B301F /* 关闭@3x.png */; };
+		6B8FA25E1D6EBF7500051858 /* UIView+MFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8FA25D1D6EBF7500051858 /* UIView+MFView.m */; };
 		6B935D6E1D138763004A9421 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B935D6D1D138763004A9421 /* main.m */; };
 		6B935D711D138763004A9421 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B935D701D138763004A9421 /* AppDelegate.m */; };
 		6B935D741D138763004A9421 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B935D731D138763004A9421 /* ViewController.m */; };
@@ -40,6 +46,7 @@
 		6B935DAC1D138D23004A9421 /* CommUtls.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B935DAB1D138D23004A9421 /* CommUtls.m */; };
 		6B935DB01D13915F004A9421 /* click.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6B935DAE1D13915F004A9421 /* click.gif */; };
 		6B935DB11D13915F004A9421 /* open.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6B935DAF1D13915F004A9421 /* open.gif */; };
+		6B95D8241D6D84BF00EEC06F /* CaptureInvoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B95D8231D6D84BF00EEC06F /* CaptureInvoke.swift */; };
 		6BB1225B1D13FFF600CA99EB /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB122591D13FFF600CA99EB /* icon-60@3x.png */; };
 		6BB1225C1D13FFF600CA99EB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB1225A1D13FFF600CA99EB /* icon@2x.png */; };
 		6BBE6E451D66B83A004E7834 /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE6E441D66B83A004E7834 /* SqliteViewController.m */; };
@@ -98,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		030B6C25D7FC01544166EA19 /* libPods-MyFood.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyFood.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2C23F51D6A9C56002A30B9 /* YPPhotos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YPPhotos.xcassets; sourceTree = "<group>"; };
 		6B2CAECA1D59793D0007A131 /* biaoqingku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "biaoqingku@2x.png"; sourceTree = "<group>"; };
 		6B2CAECE1D597FF80007A131 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
 		6B2CAECF1D597FF80007A131 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
@@ -118,6 +126,10 @@
 		6B2CAEDE1D597FF80007A131 /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
 		6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cryingFace@2x.png"; sourceTree = "<group>"; };
 		6B2CAEF61D59C4350007A131 /* 背景图@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景图@2x.png"; sourceTree = "<group>"; };
+		6B56A17F1D6E7EA400B1C3BC /* MFConstClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFConstClass.h; sourceTree = "<group>"; };
+		6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFConstClass.m; sourceTree = "<group>"; };
+		6B56A1821D6E7F0200B1C3BC /* MFConstUrlClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFConstUrlClass.h; sourceTree = "<group>"; };
+		6B56A1831D6E7F0200B1C3BC /* MFConstUrlClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFConstUrlClass.m; sourceTree = "<group>"; };
 		6B67CFFD1D547EEB0011AF01 /* EQXDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EQXDataUtils.h; path = ../EQXDataUtils.h; sourceTree = "<group>"; };
 		6B67CFFE1D547EEB0011AF01 /* EQXDataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EQXDataUtils.m; path = ../EQXDataUtils.m; sourceTree = "<group>"; };
 		6B67D0001D5480CD0011AF01 /* NetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkInfo.h; path = ../NetworkInfo.h; sourceTree = "<group>"; };
@@ -127,10 +139,17 @@
 		6B67D0081D548B2B0011AF01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B67D00A1D5495D40011AF01 /* EQXColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQXColor.h; sourceTree = "<group>"; };
 		6B67D00B1D5495D40011AF01 /* EQXColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQXColor.m; sourceTree = "<group>"; };
+		6B764AD21D6C00350039CB44 /* MemoryManagementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryManagementController.h; sourceTree = "<group>"; };
+		6B764AD31D6C00350039CB44 /* MemoryManagementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManagementController.m; sourceTree = "<group>"; };
+		6B764AD51D6C00DF0039CB44 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6B764AD61D6C00DF0039CB44 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		6B7919111D5ADC59003B301F /* 升级弹窗背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "升级弹窗背景@2x.png"; sourceTree = "<group>"; };
 		6B7919121D5ADC59003B301F /* 升级弹窗背景@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "升级弹窗背景@3x.png"; sourceTree = "<group>"; };
 		6B7919151D5AFA66003B301F /* 关闭@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭@2x.png"; sourceTree = "<group>"; };
 		6B7919161D5AFA66003B301F /* 关闭@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭@3x.png"; sourceTree = "<group>"; };
+		6B8FA25A1D6E97D200051858 /* MyFood-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyFood-Prefix.pch"; sourceTree = "<group>"; };
+		6B8FA25C1D6EBF7500051858 /* UIView+MFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MFView.h"; sourceTree = "<group>"; };
+		6B8FA25D1D6EBF7500051858 /* UIView+MFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MFView.m"; sourceTree = "<group>"; };
 		6B935D691D138763004A9421 /* MyFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B935D6D1D138763004A9421 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B935D6F1D138763004A9421 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +165,8 @@
 		6B935DAD1D138E44004A9421 /* ConstantUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstantUI.h; sourceTree = "<group>"; };
 		6B935DAE1D13915F004A9421 /* click.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = click.gif; sourceTree = "<group>"; };
 		6B935DAF1D13915F004A9421 /* open.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = open.gif; sourceTree = "<group>"; };
+		6B95D8221D6D84BF00EEC06F /* MyFood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFood-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B95D8231D6D84BF00EEC06F /* CaptureInvoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureInvoke.swift; sourceTree = "<group>"; };
 		6BB122591D13FFF600CA99EB /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@3x.png"; sourceTree = "<group>"; };
 		6BB1225A1D13FFF600CA99EB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		6BBE6E431D66B83A004E7834 /* SqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteViewController.h; sourceTree = "<group>"; };
@@ -325,6 +346,17 @@
 			path = arrowImage;
 			sourceTree = "<group>";
 		};
+		6B56A17E1D6E7E1A00B1C3BC /* global */ = {
+			isa = PBXGroup;
+			children = (
+				6B56A17F1D6E7EA400B1C3BC /* MFConstClass.h */,
+				6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */,
+				6B56A1821D6E7F0200B1C3BC /* MFConstUrlClass.h */,
+				6B56A1831D6E7F0200B1C3BC /* MFConstUrlClass.m */,
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
 		6B67D0061D5489830011AF01 /* sql */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +386,19 @@
 			name = color;
 			sourceTree = "<group>";
 		};
+		6B764AD11D6C00110039CB44 /* memory management */ = {
+			isa = PBXGroup;
+			children = (
+				6B764AD21D6C00350039CB44 /* MemoryManagementController.h */,
+				6B764AD31D6C00350039CB44 /* MemoryManagementController.m */,
+				6B764AD51D6C00DF0039CB44 /* Person.h */,
+				6B764AD61D6C00DF0039CB44 /* Person.m */,
+				6B95D8221D6D84BF00EEC06F /* MyFood-Bridging-Header.h */,
+				6B95D8231D6D84BF00EEC06F /* CaptureInvoke.swift */,
+			);
+			path = "memory management";
+			sourceTree = "<group>";
+		};
 		6B935D601D138763004A9421 = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +420,8 @@
 		6B935D6B1D138763004A9421 /* MyFood */ = {
 			isa = PBXGroup;
 			children = (
+				6B8FA25A1D6E97D200051858 /* MyFood-Prefix.pch */,
+				6B56A17E1D6E7E1A00B1C3BC /* global */,
 				6BDE64481D58557E00F3A83F /* ViewController */,
 				6BFA28FE1D35E9B600A201AC /* videoToGif */,
 				6B935D881D138A66004A9421 /* resource */,
@@ -473,6 +520,7 @@
 		6BCABBA51D66D58E0007BED8 /* photo */ = {
 			isa = PBXGroup;
 			children = (
+				6B2C23F51D6A9C56002A30B9 /* YPPhotos.xcassets */,
 				6BCABBF81D66F2200007BED8 /* BrowerController */,
 				6BCABBEB1D66F0DA0007BED8 /* PictureController */,
 				6BCABBE61D66E8DF0007BED8 /* support */,
@@ -546,6 +594,8 @@
 				6BCABBE71D66E8DF0007BED8 /* PHObject+SupportCategory.h */,
 				6BCABBE81D66E8DF0007BED8 /* PHObject+SupportCategory.m */,
 				6BCABBE91D66E8DF0007BED8 /* YPPhotoDefines.h */,
+				6B8FA25C1D6EBF7500051858 /* UIView+MFView.h */,
+				6B8FA25D1D6EBF7500051858 /* UIView+MFView.m */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -599,6 +649,7 @@
 		6BDE645E1D58600100F3A83F /* left */ = {
 			isa = PBXGroup;
 			children = (
+				6B764AD11D6C00110039CB44 /* memory management */,
 				6BCABBA51D66D58E0007BED8 /* photo */,
 				6BBE6E421D66B822004E7834 /* sqlite */,
 				6BF9F9691D655285004BBA18 /* SList */,
@@ -750,6 +801,7 @@
 				6B2CAEF31D59B98E0007A131 /* cryingFace@2x.png in Resources */,
 				6B2CAEE81D597FF80007A131 /* whiteArrow@2x.png in Resources */,
 				6B67D0091D548B2B0011AF01 /* Assets.xcassets in Resources */,
+				6B2C23F61D6A9C56002A30B9 /* YPPhotos.xcassets in Resources */,
 				6B2CAEDF1D597FF80007A131 /* blackArrow.png in Resources */,
 				6B2CAEE61D597FF80007A131 /* myBlueArrow@2x.png in Resources */,
 				6B2CAEE51D597FF80007A131 /* myBlueArrow.png in Resources */,
@@ -834,11 +886,13 @@
 				6BDE644E1D5855EF00F3A83F /* MiddleViewController.m in Sources */,
 				6BF9F95F1D65459A004BBA18 /* FontStoreCell.m in Sources */,
 				6BCABBBA1D66E56C0007BED8 /* YPPhotoStore.m in Sources */,
+				6B764AD41D6C00350039CB44 /* MemoryManagementController.m in Sources */,
 				6B2CAEEB1D597FF80007A131 /* EGORefreshTablLeftView.m in Sources */,
 				6BCABBE11D66E6B20007BED8 /* NSArray+MASAdditions.m in Sources */,
 				6BDE645A1D585A6C00F3A83F /* SceneListViewController.m in Sources */,
 				6BCABBBB1D66E56C0007BED8 /* YPPhotoStoreConfiguraion.m in Sources */,
 				6BCABC021D66F2200007BED8 /* YPPhotoBrowerCell.m in Sources */,
+				6B95D8241D6D84BF00EEC06F /* CaptureInvoke.swift in Sources */,
 				6BF9F9641D65459A004BBA18 /* FontStoreViewController.m in Sources */,
 				6BCABBB01D66E31F0007BED8 /* PhotoGroupViewController.m in Sources */,
 				6BCABC0A1D66F31E0007BED8 /* UIView+Category.m in Sources */,
@@ -855,10 +909,12 @@
 				6BCABBF41D66F0DA0007BED8 /* YPPhotoBottomReusableView.m in Sources */,
 				6B935D711D138763004A9421 /* AppDelegate.m in Sources */,
 				6BCABBF51D66F0DA0007BED8 /* YPPhotoPreviewController.m in Sources */,
+				6B56A1841D6E7F0200B1C3BC /* MFConstUrlClass.m in Sources */,
 				6BCABC041D66F2200007BED8 /* YPPhotoBrowerDataSource.m in Sources */,
 				6BCABBE31D66E6B20007BED8 /* View+MASAdditions.m in Sources */,
 				6BFA29011D35E9D100A201AC /* VideoToGifViewController.m in Sources */,
 				6B67D0051D54896D0011AF01 /* EQXTabbarController.m in Sources */,
+				6B764AD71D6C00DF0039CB44 /* Person.m in Sources */,
 				6BCABC031D66F2200007BED8 /* YPPhotoBrowerController.m in Sources */,
 				6B67CFFF1D547EEB0011AF01 /* EQXDataUtils.m in Sources */,
 				6BFA29041D35EB3C00A201AC /* IconItem.m in Sources */,
@@ -866,6 +922,7 @@
 				6BF9F9631D65459A004BBA18 /* FontStoreTableView.m in Sources */,
 				6BF9F9681D6546C0004BBA18 /* MultiThreadViewController.m in Sources */,
 				6BF9F9611D65459A004BBA18 /* FontStoreColumnTableView.m in Sources */,
+				6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */,
 				6BCABBE01D66E6B20007BED8 /* MASViewConstraint.m in Sources */,
 				6B2CAEEA1D597FF80007A131 /* EGORefreshTableHeaderView.m in Sources */,
 				6B935D871D138821004A9421 /* RNFrostedSidebar.m in Sources */,
@@ -873,6 +930,7 @@
 				6BCABBDD1D66E6B20007BED8 /* MASConstraintMaker.m in Sources */,
 				6BF9F9621D65459A004BBA18 /* FontStoreRequest.m in Sources */,
 				6BCABBE41D66E6B20007BED8 /* ViewController+MASAdditions.m in Sources */,
+				6B8FA25E1D6EBF7500051858 /* UIView+MFView.m in Sources */,
 				6B935DAC1D138D23004A9421 /* CommUtls.m in Sources */,
 				6B935D6E1D138763004A9421 /* main.m in Sources */,
 				6BF9F95E1D65459A004BBA18 /* FontPriceTipView.m in Sources */,
@@ -991,13 +1049,18 @@
 			baseConfigurationReference = 74C0A60FED94518E98FAB72D /* Pods-MyFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/MyFood-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = MyFood/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eqxiu.EasyShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFood/left/memory management/MyFood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
 			};
 			name = Debug;
@@ -1007,13 +1070,17 @@
 			baseConfigurationReference = 8A6ED1566AE42EACDB939726 /* Pods-MyFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/MyFood-Prefix.pch";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = MyFood/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eqxiu.EasyShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFood/left/memory management/MyFood-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)";
 			};
 			name = Release;

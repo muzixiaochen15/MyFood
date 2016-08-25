@@ -11,12 +11,14 @@
 #import "YPPhotosController.h"
 #import "PhotosStore/YPPhotoStore.h"
 
-typedef void (^PhotoAssetsEndSelectedCallBack) (NSArray <PHAsset *> *, NSArray <NSNumber *> *);
+NS_ASSUME_NONNULL_BEGIN
+typedef void (^PhotoAssetsEndSelectedCallBack) (NSArray <PHAsset *> * _Nullable, NSArray <NSNumber *> * _Nullable);
 
 @interface PhotoGroupViewController : UITableViewController<YPPhotosControllerDelegate>
-@property (nonatomic, strong) YPPhotoStore * photoStore;
-@property (nonatomic, strong) NSArray<PHAssetCollection *> * groups;
+@property (nonatomic, strong, nonnull) YPPhotoStore * photoStore;
+@property (nonatomic, strong, nonnull) NSArray<PHAssetCollection *> * groups;
 @property (nonatomic, strong) NSNumber * maxNumberOfSelectImages;
 @property (nullable, nonatomic, copy) PhotoAssetsEndSelectedCallBack photosCallBack;
 
 @end
+NS_ASSUME_NONNULL_END

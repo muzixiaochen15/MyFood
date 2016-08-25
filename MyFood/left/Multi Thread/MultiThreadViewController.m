@@ -79,7 +79,7 @@
         NSLog(@"dispatch_async 3 end");
     });
 #pragma mark - 执行某段代码N次
-    return;
+#if 0
     __weak MultiThreadViewController *weakSelf = self;
     dispatch_apply(5, previousQueue, ^(size_t index) {
         NSString *string = [NSString stringWithFormat:@"dispatch_apply time %ld time", (long)index];
@@ -87,6 +87,7 @@
             [weakSelf showLabelWithString:string];
         }
     });
+#endif
 }
 - (void)showLabelWithString:(NSString *)string{
     NSLog(@"%@", string);

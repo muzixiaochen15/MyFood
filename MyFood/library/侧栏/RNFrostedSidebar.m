@@ -336,9 +336,9 @@ static RNFrostedSidebar *rn_frostedMenu;
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskAll;
-}
+//- (NSUInteger)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationMaskAll;
+//}
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];

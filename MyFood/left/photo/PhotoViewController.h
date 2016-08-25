@@ -10,6 +10,8 @@
 #import <Photos/PHAsset.h>
 #import "PhotoGroupViewController.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void (^PhotosEndSelectedCallBack) (NSArray <UIImage *> *);
 
 @interface PhotoViewController : UINavigationController
@@ -19,3 +21,4 @@ typedef void (^PhotosEndSelectedCallBack) (NSArray <UIImage *> *);
 @property (nonatomic, copy, nullable) PhotosEndSelectedCallBack imageCallBack;
 
 @end
+NS_ASSUME_NONNULL_END

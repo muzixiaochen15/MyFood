@@ -22,6 +22,7 @@
     self.viewControllers = @[[[PhotoGroupViewController alloc]init]];
     PhotoGroupViewController *rootVC = [self.viewControllers firstObject];
     [self.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#212636"]];
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [self.navigationBar setTranslucent:NO];
@@ -32,6 +33,7 @@
             _assetCallBack(assets, status);
         }
         if (_imageCallBack) {
+            //非空处理imags
             [YPPhotoStoreHandleClass imagesWithAssets:assets status:status Size:_imageSize complete:^(NSArray<UIImage *> * _Nonnull images) {
                 _imageCallBack(images);
                 [weakSelf dismissViewControllerAnimated:true completion:nil];

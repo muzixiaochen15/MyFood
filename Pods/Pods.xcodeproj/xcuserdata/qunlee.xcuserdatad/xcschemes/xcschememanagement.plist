@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ZSSRichTextEditor.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2BE3C917A483DC149651FDCD4AFBA89D</key>
+		<key>39B777B30DF39EA05E672F6F953EF8E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33D7B2E6C429513623815232F306C164</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3C001570DD4C61F7D0B613B49369D6EB</key>
+		<key>7FFDEEEB352F998A2A3C2ED6D37CFADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F05F7F30840FDBFB8C9B90EFE250F901</key>
+		<key>E7D62189D7DEA20DC05997C050D537A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
