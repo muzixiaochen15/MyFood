@@ -11,3 +11,5 @@
 extern NSString *const HeadUrl;
 
 extern NSString *const CustomUrl;
+
+extern NSString *const TestUrl;

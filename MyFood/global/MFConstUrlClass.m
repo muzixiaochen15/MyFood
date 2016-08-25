@@ -10,3 +10,4 @@
 
 NSString *const HeadUrl = @"http://m1.yqxiu.cn";
 NSString *const CustomUrl = @"http://www.eqxiu.com";
+NSString *const TestUrl = @"";
