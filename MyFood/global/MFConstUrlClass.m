@@ -9,4 +9,4 @@
 #import "MFConstUrlClass.h"
 
 NSString *const HeadUrl = @"http://m1.yqxiu.cn";
-NSString *const CustomUrl = @"";
+NSString *const CustomUrl = @"http://www.eqxiu.com";
