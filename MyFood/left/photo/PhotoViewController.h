@@ -12,13 +12,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^PhotosEndSelectedCallBack) (NSArray <UIImage *> *);
+typedef void (^PhotosEndSelectedCallBack) (NSArray <UIImage *>   *_Nullable );
 
 @interface PhotoViewController : UINavigationController
 @property (nonatomic, assign) NSUInteger maxSelectedPhotos;
 @property (nonatomic, copy, nullable) PhotoAssetsEndSelectedCallBack assetCallBack;
 @property (nonatomic, assign) CGSize imageSize;
 @property (nonatomic, copy, nullable) PhotosEndSelectedCallBack imageCallBack;
+//test2
+@property (nonatomic, strong) NSString *imageStr;
 
 @end
 NS_ASSUME_NONNULL_END
