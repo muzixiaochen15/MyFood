@@ -19,8 +19,8 @@ typedef void (^PhotosEndSelectedCallBack) (NSArray <UIImage *>   *_Nullable );
 @property (nonatomic, copy, nullable) PhotoAssetsEndSelectedCallBack assetCallBack;
 @property (nonatomic, assign) CGSize imageSize;
 @property (nonatomic, copy, nullable) PhotosEndSelectedCallBack imageCallBack;
-//test2
-@property (nonatomic, strong) NSString *imageStr;
+//test
+@property (nonatomic, strong) NSString *string;
 
 @end
 NS_ASSUME_NONNULL_END
