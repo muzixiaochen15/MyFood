@@ -8,6 +8,7 @@
 
 #import "YPPhotoGroupCell.h"
 #import "View+MASAdditions.h"
+#import "EQXColor.h"
 
 @interface YPPhotoGroupCell ()
 
@@ -64,8 +65,6 @@
 
     // Configure the view for the selected state
 }
-
-
 #pragma mark - AddSubviews
 
 - (void)addSubImageView

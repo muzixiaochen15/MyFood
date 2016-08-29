@@ -24,6 +24,8 @@
 		6B2CAEEB1D597FF80007A131 /* EGORefreshTablLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAEDD1D597FF80007A131 /* EGORefreshTablLeftView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B2CAEF31D59B98E0007A131 /* cryingFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */; };
 		6B2CAEF71D59C4350007A131 /* 背景图@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF61D59C4350007A131 /* 背景图@2x.png */; };
+		6B54EE1A1D73C86B00709467 /* ListTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54EE191D73C86B00709467 /* ListTestViewController.m */; };
+		6B54EE1D1D73C8ED00709467 /* TestListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54EE1C1D73C8ED00709467 /* TestListCell.m */; };
 		6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */; };
 		6B56A1841D6E7F0200B1C3BC /* MFConstUrlClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B56A1831D6E7F0200B1C3BC /* MFConstUrlClass.m */; };
 		6B67CFFF1D547EEB0011AF01 /* EQXDataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67CFFE1D547EEB0011AF01 /* EQXDataUtils.m */; };
@@ -126,6 +128,10 @@
 		6B2CAEDE1D597FF80007A131 /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
 		6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cryingFace@2x.png"; sourceTree = "<group>"; };
 		6B2CAEF61D59C4350007A131 /* 背景图@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景图@2x.png"; sourceTree = "<group>"; };
+		6B54EE181D73C86B00709467 /* ListTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTestViewController.h; sourceTree = "<group>"; };
+		6B54EE191D73C86B00709467 /* ListTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTestViewController.m; sourceTree = "<group>"; };
+		6B54EE1B1D73C8ED00709467 /* TestListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestListCell.h; sourceTree = "<group>"; };
+		6B54EE1C1D73C8ED00709467 /* TestListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestListCell.m; sourceTree = "<group>"; };
 		6B56A17F1D6E7EA400B1C3BC /* MFConstClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFConstClass.h; sourceTree = "<group>"; };
 		6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFConstClass.m; sourceTree = "<group>"; };
 		6B56A1821D6E7F0200B1C3BC /* MFConstUrlClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFConstUrlClass.h; sourceTree = "<group>"; };
@@ -697,6 +703,10 @@
 			children = (
 				6BF9F96A1D6552AA004BBA18 /* SList.cpp */,
 				6BF9F96B1D6552AA004BBA18 /* SList.hpp */,
+				6B54EE181D73C86B00709467 /* ListTestViewController.h */,
+				6B54EE191D73C86B00709467 /* ListTestViewController.m */,
+				6B54EE1B1D73C8ED00709467 /* TestListCell.h */,
+				6B54EE1C1D73C8ED00709467 /* TestListCell.m */,
 			);
 			path = SList;
 			sourceTree = "<group>";
@@ -905,6 +915,7 @@
 				6BDE64511D58560100F3A83F /* RightViewController.m in Sources */,
 				6BDE645D1D585B5300F3A83F /* UIColor+CustomColors.m in Sources */,
 				6BDE64661D58600100F3A83F /* LeftViewController.m in Sources */,
+				6B54EE1D1D73C8ED00709467 /* TestListCell.m in Sources */,
 				6BCABC0D1D66F37C0007BED8 /* UIViewController+Frame.m in Sources */,
 				6BCABBF41D66F0DA0007BED8 /* YPPhotoBottomReusableView.m in Sources */,
 				6B935D711D138763004A9421 /* AppDelegate.m in Sources */,
@@ -924,6 +935,7 @@
 				6BF9F9611D65459A004BBA18 /* FontStoreColumnTableView.m in Sources */,
 				6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */,
 				6BCABBE01D66E6B20007BED8 /* MASViewConstraint.m in Sources */,
+				6B54EE1A1D73C86B00709467 /* ListTestViewController.m in Sources */,
 				6B2CAEEA1D597FF80007A131 /* EGORefreshTableHeaderView.m in Sources */,
 				6B935D871D138821004A9421 /* RNFrostedSidebar.m in Sources */,
 				6BCABBF71D66F0DA0007BED8 /* YPPhotosController.m in Sources */,

@@ -32,6 +32,7 @@
         NSData *data = [[NSData alloc]initWithContentsOfURL:url];
         UIImage *image = [UIImage imageWithData:data];
         if (data != nil) {
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 testImageView.image = image;
             });
