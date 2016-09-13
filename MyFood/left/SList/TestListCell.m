@@ -29,7 +29,7 @@
     _listTitleLabel.font = [UIFont fontWithName:@"Avenir-Light" size:16.0f];
     _listTitleLabel.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:_listTitleLabel];
-    [_listTitleLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(5.0f, 5.0f, 20.0f, 100.0f)];
+    [_listTitleLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(5.0f, 20.0f, 5.0f, 100.0f)];
 }
 - (void)addProcessView{
     self.proview = [UIProgressView new];
@@ -51,5 +51,4 @@
         make.height.equalTo(@11);
     }];
 }
-
 @end

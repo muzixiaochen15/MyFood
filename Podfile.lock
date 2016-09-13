@@ -14,19 +14,22 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - MBProgressHUD (1.0.0)
   - pop (1.0.9)
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - MBProgressHUD (~> 1.0.0)
   - pop (~> 1.0.9)
   - PureLayout (~> 3.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: e27a013f5f047b1953b0bdfc4da6f0c923615fa9
+PODFILE CHECKSUM: c71278bd79968b9f2bde38556c2f029bdb0b9792
 
 COCOAPODS: 1.1.0.beta.1

@@ -368,7 +368,7 @@
 {
     if (_bottomBar == nil)
     {
-        _bottomBar = [[UITabBar alloc]initWithFrame:CGRectMake(0, self.height - 44, self.width, 44)];
+        _bottomBar = [[UITabBar alloc]initWithFrame:CGRectMake(0, self.height - 104, self.width, 44)];
         
         //add subviews
         [_bottomBar addSubview:self.sendButton];

@@ -10,6 +10,8 @@
 #import "TestListCell.h"
 #import "EQXColor.h"
 #import "PureLayout/PureLayout.h"
+#import "StringsClass.h"
+#import "SLinkList.h"
 
 @interface ListTestViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSArray *items;
@@ -17,10 +19,74 @@
 @end
 
 @implementation ListTestViewController
+//view为nil时调用
+- (void)loadView{
+    [super loadView];
+}
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
+    
     [self addTalbeView];
+    //[self c_codeTest];
+}
+#pragma mark - c code
+- (void)c_codeTest{
+    ListNode *h;//h指向结构体NODE
+    int i = 1, n, score;
+    char name [10];
+    
+    while ( i )
+    {
+        /*输入提示信息*/
+        printf("1--建立新的链表\n");
+        printf("2--添加元素\n");
+        printf("3--删除元素\n");
+        printf("4--输出当前表中的元素\n");
+        printf("0--退出\n");
+        
+        scanf("%d",&i);
+        switch(i)
+        {
+            case 1:
+                printf("n=");   /*输入创建链表结点的个数*/
+                scanf("%d",&n);
+                h=CreateList(n);/*创建链表*/
+                printf("list elements is : \n");
+                PrintList(h);
+                break;
+                
+            case 2:
+                printf("input the position. of insert element:");
+                scanf("%d",&i);
+                printf("input name of the student:");
+                scanf("%s",name);
+                printf("input score of the student:");
+                scanf("%d",&score);
+                InsertList(h, i, name, score, name);
+                printf("list elements is:\n");
+                PrintList(h);
+                break;
+                
+            case 3:
+                printf("input the position of delete element:");
+                scanf("%d",&i);
+                DeleteList(h, i, n);
+                printf("list elements in : \n");
+                PrintList(h);
+                break;
+                
+            case 4:
+                printf("list element is : \n");
+                PrintList(h);
+                break;
+            case 0:
+                return;
+                break;
+            default:
+                printf("ERROR!Try again!\n");
+        }
+    }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

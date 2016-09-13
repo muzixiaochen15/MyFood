@@ -13,13 +13,14 @@
 
 @end
 
+
 @implementation SqliteViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
+    
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

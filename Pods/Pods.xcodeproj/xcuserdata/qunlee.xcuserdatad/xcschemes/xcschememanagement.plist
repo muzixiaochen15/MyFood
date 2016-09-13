@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyFood.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>39B777B30DF39EA05E672F6F953EF8E0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7FFDEEEB352F998A2A3C2ED6D37CFADE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7D62189D7DEA20DC05997C050D537A4</key>
+		<key>9AD93E758AB671A0426A7B5C4146144E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C65BC60052F4E7885656613A529E10DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F153C5E2B29E41A125B53F06E31D4FE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

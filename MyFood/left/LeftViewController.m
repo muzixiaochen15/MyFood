@@ -15,6 +15,10 @@
 #import "SqliteViewController.h"
 #import "photo/PhotoCollectionController.h"
 #import "MemoryManagementController.h"
+#import "ListTestViewController.h"
+#import "ScanCodeViewController.h"
+#import "VideoViewController.h"
+#import "Audio/AudioViewController.h"
 
 @interface LeftViewController()
 
@@ -72,7 +76,6 @@
     cell.textLabel.text = [self.items[indexPath.row] firstObject];
     return cell;
 }
-
 #pragma mark - Private Instance methods
 - (void)configureTableView{
     self.items = @[@[@"字体", [FontStoreViewController class]],
@@ -80,7 +83,11 @@
                    @[@"GCD", [MultiThreadViewController class]],
                    @[@"Sqlite", [SqliteViewController class]],
                    @[@"Photo", [PhotoCollectionController class]],
-                   @[@"Memory manageMent", [MemoryManagementController class]]
+                   @[@"Memory manageMent", [MemoryManagementController class]],
+                   @[@"List_test", [ListTestViewController class]],
+                   @[@"scan code", [ScanCodeViewController class]],
+                   @[@"video", [VideoViewController class]],
+                   @[@"audio", [AudioViewController class]]
                    ];
     [self.tableView registerClass:[MenuTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];
