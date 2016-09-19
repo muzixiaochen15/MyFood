@@ -7,4 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@interface MFConstClass : NSObject
+
++ (UIColor *)getRandomColor;
+
+@end

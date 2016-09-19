@@ -10,7 +10,7 @@
 #import "EQXColor.h"
 #import "ViewController.h"
 #import "LeftViewController.h"
-#import "MiddleViewController.h"
+#import "MiddleCollectionViewController.h"
 #import "RightViewController.h"
 
 @implementation EQXTabbarController
@@ -28,7 +28,7 @@
     UITabBarItem *leftItem = [[UITabBarItem alloc]initWithTitle:@"创作" image:[UIImage imageNamed:@"tabbarCreateScene"] selectedImage:[[UIImage imageNamed:@"tabbarSelectCreateScene"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     leftNav.tabBarItem = leftItem;
     
-    MiddleViewController *middleVC = [[MiddleViewController alloc]init];
+    MiddleCollectionViewController *middleVC = [[MiddleCollectionViewController alloc]init];
     [middleVC.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
     UINavigationController *middleNav = [[UINavigationController alloc]initWithRootViewController:middleVC];
     [middleNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#212636"]];

@@ -362,12 +362,12 @@
                   moduleName = "MyFood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qunlee/Documents/MyFood/MyFood/left/photo/PhotoGroupViewController.m"
-                  timestampString = "495430553.896086"
+                  timestampString = "495534458.42157"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "656">
+                  offsetFromSymbolStart = "708">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -377,12 +377,12 @@
                   moduleName = "MyFood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qunlee/Documents/MyFood/MyFood/left/photo/PhotoGroupViewController.m"
-                  timestampString = "495430553.896229"
+                  timestampString = "495534458.421732"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "75">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -602,12 +602,12 @@
                   moduleName = "MyFood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qunlee/Documents/MyFood/MyFood/left/photo/PhotosStore/YPPhotoStore.m"
-                  timestampString = "495430553.909992"
+                  timestampString = "495534458.426166"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "39">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -617,12 +617,12 @@
                   moduleName = "MyFood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qunlee/Documents/MyFood/MyFood/left/photo/PhotosStore/YPPhotoStore.m"
-                  timestampString = "495430553.910109"
+                  timestampString = "495534458.42628"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -632,12 +632,12 @@
                   moduleName = "MyFood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qunlee/Documents/MyFood/MyFood/left/photo/PhotosStore/YPPhotoStore.m"
-                  timestampString = "495430553.910201"
+                  timestampString = "495534458.426365"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
                   endingLineNumber = "109"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -687,6 +687,86 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "-remoteControlReceivedWithEvent:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFood/middle/siri/MiddleCollectionViewController.m"
+            timestampString = "495529529.646113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-configureViews"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFood/middle/siri/MiddleCollectionViewController.m"
+            timestampString = "495529529.646113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-collectionView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFood/middle/siri/MiddleCollectionViewController.m"
+            timestampString = "495533757.819822"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFood/middle/siri/MiddleCollectionViewController.m"
+            timestampString = "495530371.051113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-collectionView:layout:sizeForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFood/middle/siri/MiddleCollectionViewController.m"
+            timestampString = "495530190.425725"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-configureViews"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
