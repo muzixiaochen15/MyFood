@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^UpdateDataBlock)();
+
 /** 网络类型 */
 typedef NS_ENUM(NSUInteger, RequestType) {
     kRequestTypeGet,
@@ -15,10 +17,14 @@ typedef NS_ENUM(NSUInteger, RequestType) {
 };
 
 @interface EQXRequest : NSObject
+
+@property (copy, nonatomic) UpdateDataBlock updateDataBlock;
+
 /** http请求 */
 - (void)requestWithUrl:(NSString *)url
        withRequestType:(RequestType)type
-        withParameters:(NSDictionary *)parameters;
+        withParameters:(NSDictionary *)parameters
+       withFinishBlcok:(void (^)(NSDictionary *jsonDic))finishBlock;
 /** 下载 */
 - (void)downLoadTaskRequestWithUrl:(NSString *)urlString;
 /** 上传 */

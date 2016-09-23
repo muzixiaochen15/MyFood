@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="JokeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="126.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-fb-A4a">
+                        <rect key="frame" x="23" y="10" width="274" height="106.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="feZ-fb-A4a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Cht-X9-FCe"/>
+                    <constraint firstAttribute="bottom" secondItem="feZ-fb-A4a" secondAttribute="bottom" constant="10" id="JjX-oh-agn"/>
+                    <constraint firstAttribute="trailing" secondItem="feZ-fb-A4a" secondAttribute="trailing" constant="23" id="wn9-hN-Wfw"/>
+                    <constraint firstItem="feZ-fb-A4a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="zSd-LT-Zk1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="jokeTitleLabel" destination="feZ-fb-A4a" id="eIQ-Ne-IFN"/>
+            </connections>
+            <point key="canvasLocation" x="258" y="288.5"/>
+        </tableViewCell>
+    </objects>
+</document>

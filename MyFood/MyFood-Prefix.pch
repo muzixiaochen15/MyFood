@@ -19,5 +19,6 @@
 
 #import "MFConstUrlClass.h"
 #import "CommonDefine.h"
+#import "MFConstClass.h"
 
 #endif

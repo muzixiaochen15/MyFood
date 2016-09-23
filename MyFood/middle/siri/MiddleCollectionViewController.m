@@ -10,12 +10,21 @@
 #import "JuHeTableViewController.h"
 #import "MiddleCollectionCell.h"
 #import "PureLayout/PureLayout.h"
+#import "IOSReflectionTabviewController.h"
+#import "EQXRequest.h"
+#import "MFConstClass.h"
+#import "FunnyTypeItem.h"
+#import <PINCache/PINCache.h>
 
 @interface MiddleCollectionViewController ()
 
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSMutableArray *items;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) EQXRequest *request;
+
+
 @end
 
 @implementation MiddleCollectionViewController
@@ -24,18 +33,62 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.title = @"场景";
-    [self configureViews];
+    _items = [[NSMutableArray alloc]init];
+    [self getRequest];
 }
+- (void)getRequest{
+    NSString *reqUrl = [NSString stringWithFormat:@"%@%@?key=%@", JuHeIP, JuHeFunnyType, JuHeFunnyAppKey];
+    __weak MiddleCollectionViewController *weakSelf = self;
+    [[PINCache sharedCache]objectForKey:reqUrl block:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
+        if (object&&[object isKindOfClass:[NSDictionary class]]) {
+            if (weakSelf) {
+                [weakSelf parseJsonDic:object withUrl:reqUrl];
+            }
+            return;
+        }
+        if (weakSelf) {
+            [weakSelf.request requestWithUrl:reqUrl withRequestType:kRequestTypeGet withParameters:nil withFinishBlcok:^(NSDictionary *jsonDic) {
+                if (weakSelf) {
+                    [weakSelf parseJsonDic:jsonDic withUrl:reqUrl];
+                }
+            }];
+        }
+    }];
+}
+- (void)parseJsonDic:(NSDictionary *)jsonDic withUrl:(NSString *)url{
+    if (jsonDic&&[jsonDic isKindOfClass:[NSDictionary class]]) {
+        ///转化
+        [[PINCache sharedCache]setObject:jsonDic forKey:url];
+    }
+    if (jsonDic[@"result"][@"data"] > 0) {
+        NSDictionary *dic = jsonDic[@"result"][@"data"][0];
+        NSArray *typeArray = dic.allKeys;
+        for (NSString *num in typeArray) {
+            FunnyTypeItem *item = [[FunnyTypeItem alloc]init];
+            item.id = num;
+            item.title = dic[num];
+            NSArray *temArray = @[item, [JuHeTableViewController class]];
+            [_items addObject:temArray];
 
+        }
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self configureViews];
+    });
+}
+- (EQXRequest *)request{
+    if (!_request) {
+        _request = [[EQXRequest alloc]init];
+    }
+    return _request;
+}
 - (void)configureViews{
-    _items = @[@[@"juhe", [JuHeTableViewController class]]];
     [self.collectionView registerClass:[MiddleCollectionCell class] forCellWithReuseIdentifier:NSStringFromClass([MiddleCollectionCell class])];
-//    [self.collectionView reloadData];
 }
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         layout.itemSize = CGSizeMake(64.0f, 46.0f);
         layout.minimumLineSpacing = 1.0f;
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -48,7 +101,6 @@
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.backgroundColor = [UIColor clearColor];
-//        _collectionView.collectionViewLayout = layout;
         [self.view addSubview:_collectionView];
         [_collectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
     }
@@ -59,17 +111,16 @@
     return [_items count];
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *viewController = [self viewControllerForRowAtIndexPath:indexPath];
-    viewController.title = [self titleForRowAtIndexPath:indexPath];
+    JuHeTableViewController *viewController = [self viewControllerForRowAtIndexPath:indexPath];
+    viewController.title = [self titleForRowAtIndexPath:indexPath].title;
+    viewController.listType = [self titleForRowAtIndexPath:indexPath].id;
     viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat cellWidth = 0.0f;
-//    CGFloat cellHeight = 0.0f;
     cellWidth = (CGRectGetWidth([UIScreen mainScreen].bounds) - 4*3)/3;
-//    cellHeight = cellWidth * (CGRectGetHeight([UIScreen mainScreen].bounds)/CGRectGetWidth([UIScreen mainScreen].bounds));
     return CGSizeMake(cellWidth, cellWidth);
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
@@ -83,13 +134,14 @@
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MiddleCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([MiddleCollectionCell class]) forIndexPath:indexPath];
-    [cell.textButton setTitle:_items[indexPath.row][0] forState:UIControlStateNormal];
+    FunnyTypeItem *item = _items[indexPath.row][0];
+    [cell.textButton setTitle:item.title forState:UIControlStateNormal];
     return cell;
 }
-- (UIViewController *)viewControllerForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (JuHeTableViewController *)viewControllerForRowAtIndexPath:(NSIndexPath *)indexPath{
     return [[_items[indexPath.row]lastObject] new];
 }
-- (NSString *)titleForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (FunnyTypeItem *)titleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return [_items[indexPath.row]firstObject];
 }
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JuHeTableViewController : UITableViewController
+@interface JuHeTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NSString *listType;
 
 @end

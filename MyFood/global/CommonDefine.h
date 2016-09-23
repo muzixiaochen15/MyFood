@@ -15,7 +15,7 @@
 #define IOS7  [[UIDevice currentDevice].systemVersion floatValue] >= 7.0f
 #define Screen_Width     [[UIScreen mainScreen] bounds].size.width
 #define Screen_Height   [[UIScreen mainScreen] bounds].size.height
-
+#define JUHEKEY  
 #pragma mark - App info
 static inline NSString *getAppVersion(){
     NSDictionary *infoDict = [[NSBundle mainBundle] infoDictionary];

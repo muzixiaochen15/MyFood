@@ -7,8 +7,19 @@
 //
 
 #import "JuHeTableViewController.h"
+#import "FunnyItem.h"
+#import "EQXRequest.h"
+#import "MFConstUrlClass.h"
+#import <PINCache/PINCache.h>
+#import "JokeTableViewCell.h"
+#import <PureLayout/PureLayout.h>
+#import "EQXColor.h"
 
 @interface JuHeTableViewController ()
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *listArray;
+@property (nonatomic, strong) EQXRequest *request;
 
 @end
 
@@ -16,83 +27,94 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
+    [self getRequest];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [UITableView new];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+        [self.view addSubview:_tableView];
+        [_tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JokeTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([JokeTableViewCell class])];
+    }
+    return _tableView;
+}
+- (void)getRequest{
+    _listArray = [[NSMutableArray alloc]init];
+    NSUInteger pageNum = 0,pageSize = 100;
+    NSString *url = [NSString stringWithFormat:@"%@%@?cat=%@&st=%lu&count=%lu&key=%@", JuHeIP, JuHeFunnyList, _listType, (unsigned long)pageNum, (unsigned long)pageSize, JuHeFunnyAppKey];
+    __weak JuHeTableViewController *weakSelf = self;
+    [[PINCache sharedCache]objectForKey:url block:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
+        if (object&&[object isKindOfClass:[NSDictionary class]]) {
+            if (weakSelf) {
+                [weakSelf parseJsonToDicWithDic:object withUrl:url];
+            }
+            return ;
+        }
+        if (weakSelf) {
+            [weakSelf.request requestWithUrl:url withRequestType:kRequestTypeGet withParameters:nil withFinishBlcok:^(NSDictionary *jsonDic) {
+                if (weakSelf) {
+                    [weakSelf parseJsonToDicWithDic:jsonDic withUrl:url];
+                }
+            }];
+        }
+    }];
+}
+- (void)parseJsonToDicWithDic:(NSDictionary *)dic withUrl:(NSString *)url{
+    if (dic&&[dic isKindOfClass:[NSDictionary class]]) {
+        [[PINCache sharedCache]setObject:dic forKey:url];
+    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if (dic[@"result"][@"data"] > 0) {
+            [_listArray addObjectsFromArray:[MFConstClass parseListWithItemClassName:NSStringFromClass([FunnyItem class]) withList:dic[@"result"][@"data"]]];
+            for (FunnyItem *item in _listArray) {
+                [self addHeightParameterWithHeight:item];
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    });
+}
+- (void)addHeightParameterWithHeight:(FunnyItem *)item{
+    item.title = [NSString stringWithFormat:@"        %@", item.title];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 15.0f;
+    paragraphStyle.minimumLineHeight = 15.0f;
+    paragraphStyle.maximumLineHeight = 15.0f;
+    NSDictionary *attributes = @{NSParagraphStyleAttributeName : paragraphStyle, NSFontAttributeName: [UIFont systemFontOfSize:15.0f], NSForegroundColorAttributeName: [UIColor lightGrayColor]};
+    CGRect rect = [item.title boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - (46.0f + 15.0f), CGFLOAT_MAX)
+                                          options:NSStringDrawingUsesLineFragmentOrigin
+                                       attributes:attributes
+                                          context:nil];
+    NSAttributedString * subString = [[NSAttributedString alloc] initWithString:item.title attributes:attributes];
+    item.titleAttr = subString;
+    item.titleHeight = rect.size.height + 25.0f;
+}
+- (EQXRequest *)request{
+    if (!_request) {
+        _request = [[EQXRequest alloc]init];
+    }
+    return _request;
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_listArray count];
 }
-
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    JokeTableViewCell *cell = (JokeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JokeTableViewCell class]) forIndexPath:indexPath];
+    FunnyItem *item = _listArray[indexPath.row];
+    [cell.jokeTitleLabel setAttributedText:item.titleAttr];
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    FunnyItem *item = _listArray[indexPath.row];
+    return item.titleHeight;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

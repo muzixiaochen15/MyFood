@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface jokeTableViewCell : UITableViewCell
+@interface JokeTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *jokeTitleLabel;
 
 @end

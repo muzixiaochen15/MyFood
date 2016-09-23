@@ -6,9 +6,9 @@
 //  Copyright © 2016年 qunlee. All rights reserved.
 //
 
-#import "jokeTableViewCell.h"
+#import "JokeTableViewCell.h"
 
-@implementation jokeTableViewCell
+@implementation JokeTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

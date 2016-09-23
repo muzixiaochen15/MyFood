@@ -10,7 +10,13 @@
 #import <UIKit/UIKit.h>
 
 @interface MFConstClass : NSObject
-
+//@property (nonatomic, weak) NSMutableArray *dataArray;
+///随机色
 + (UIColor *)getRandomColor;
-
+///反射机制 - NSString
++ (NSArray *)getPropertiesOfObject:(id)object;
+///反射机制 - variable
++ (NSArray *)getVariableNameOfObject:(id)object;
+///解析列表
++ (NSMutableArray *)parseListWithItemClassName:(NSString *)className withList:(NSArray *)array;
 @end

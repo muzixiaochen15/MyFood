@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SNLoading : NSObject
-
++ (void)showWithTitle:(NSString *)title;
++ (void)hideWithTitle:(NSString *)title;
++ (void)updateWithTitle:(NSString *)title withDetailsText:(NSString *)detailsText;
 @end
