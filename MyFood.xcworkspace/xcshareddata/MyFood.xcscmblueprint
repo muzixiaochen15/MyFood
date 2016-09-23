@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0533B236DDC1C6722AFED51B55C321BCE92E551D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0533B236DDC1C6722AFED51B55C321BCE92E551D" : 0,
+    "4F546DA6EA3315917BA1C2C223FCC643323730C1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2178702A-C44D-41D4-87BE-F2A85ED13A1B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0533B236DDC1C6722AFED51B55C321BCE92E551D" : "MyFood\/",
+    "4F546DA6EA3315917BA1C2C223FCC643323730C1" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyFood",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyFood.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/muzixiaochen15\/MyFood.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0533B236DDC1C6722AFED51B55C321BCE92E551D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/muzixiaochen15\/MyBatisGen.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4F546DA6EA3315917BA1C2C223FCC643323730C1"
+    }
+  ]
+}
