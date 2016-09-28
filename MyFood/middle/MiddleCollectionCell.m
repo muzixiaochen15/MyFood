@@ -29,7 +29,7 @@
         _textButton.userInteractionEnabled = NO;
         _textButton.backgroundColor = [MFConstClass getRandomColor];
         [_textButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_textButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:16.0f]];
+        [_textButton.titleLabel setFont:[UIFont fontWithName:@"FZY3K--GB1-0" size:16.0f]];
         [self.contentView addSubview:_textButton];
         [_textButton autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(3.0f, 3.0f, 3.0f, 3.0f)];
     }

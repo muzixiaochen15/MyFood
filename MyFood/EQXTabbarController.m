@@ -20,7 +20,9 @@
     LeftViewController *leftVC = [[LeftViewController alloc]init];
     [leftVC.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
     UINavigationController *leftNav = [[UINavigationController alloc]initWithRootViewController:leftVC];
-    [leftNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#212636"]];
+    //eqx_#212636
+    [leftNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#e13e3f"]];
+    leftNav.navigationBar.tintColor = [UIColor whiteColor];
     leftNav.navigationBar.topItem.title = @"创作";
     [leftNav.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -31,18 +33,20 @@
     MiddleCollectionViewController *middleVC = [[MiddleCollectionViewController alloc]init];
     [middleVC.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
     UINavigationController *middleNav = [[UINavigationController alloc]initWithRootViewController:middleVC];
-    [middleNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#212636"]];
-    middleNav.navigationBar.topItem.title = @"场景";
+    [middleNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#e13e3f"]];
+    middleNav.navigationBar.tintColor = [UIColor whiteColor];
+    middleNav.navigationBar.topItem.title = @"文本";
     [middleNav.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [middleNav.navigationBar setTranslucent:NO];
-    UITabBarItem *midItem = [[UITabBarItem alloc]initWithTitle:@"场景" image:[UIImage imageNamed:@"tabbarNoSelectScene"] selectedImage:[[UIImage imageNamed:@"tabbarSelectScene"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    UITabBarItem *midItem = [[UITabBarItem alloc]initWithTitle:@"文本" image:[UIImage imageNamed:@"tabbarNoSelectScene"] selectedImage:[[UIImage imageNamed:@"tabbarSelectScene"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     middleNav.tabBarItem = midItem;
     
     RightViewController *rightVC = [[RightViewController alloc]init];
     [rightVC.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
     UINavigationController *rightNav = [[UINavigationController alloc]initWithRootViewController:rightVC];
-    [rightNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#212636"]];
+    [rightNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#e13e3f"]];
+    rightNav.navigationBar.tintColor = [UIColor whiteColor];
     rightNav.navigationBar.topItem.title = @"创作";
     [rightNav.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];

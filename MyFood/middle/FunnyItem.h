@@ -15,4 +15,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSAttributedString *titleAttr;
 @property (nonatomic, assign) CGFloat titleHeight;
+@property (nonatomic, assign) NSUInteger approveNum;
+@property (nonatomic, assign) BOOL isApprove;
+@property (nonatomic, assign) BOOL isDisapprove;
 @end

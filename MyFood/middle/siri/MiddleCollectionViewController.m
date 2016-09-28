@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.title = @"场景";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"FZY3K--GB1-0" size:15.0f]}];
     _items = [[NSMutableArray alloc]init];
     [self getRequest];
 }
@@ -49,6 +49,10 @@
         if (weakSelf) {
             [weakSelf.request requestWithUrl:reqUrl withRequestType:kRequestTypeGet withParameters:nil withFinishBlcok:^(NSDictionary *jsonDic) {
                 if (weakSelf) {
+                    if (jsonDic&&[jsonDic isKindOfClass:[NSDictionary class]]) {
+                        ///转化
+                        [[PINCache sharedCache]setObject:jsonDic forKey:reqUrl];
+                    }
                     [weakSelf parseJsonDic:jsonDic withUrl:reqUrl];
                 }
             }];
@@ -56,10 +60,6 @@
     }];
 }
 - (void)parseJsonDic:(NSDictionary *)jsonDic withUrl:(NSString *)url{
-    if (jsonDic&&[jsonDic isKindOfClass:[NSDictionary class]]) {
-        ///转化
-        [[PINCache sharedCache]setObject:jsonDic forKey:url];
-    }
     if (jsonDic[@"result"][@"data"] > 0) {
         NSDictionary *dic = jsonDic[@"result"][@"data"][0];
         NSArray *typeArray = dic.allKeys;
@@ -69,7 +69,6 @@
             item.title = dic[num];
             NSArray *temArray = @[item, [JuHeTableViewController class]];
             [_items addObject:temArray];
-
         }
     }
     dispatch_async(dispatch_get_main_queue(), ^{

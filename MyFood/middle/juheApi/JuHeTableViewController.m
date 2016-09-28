@@ -35,11 +35,13 @@
         _tableView = [UITableView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.separatorColor = [EQXColor colorWithHexString:@"#e6e6e6"];
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         [self.view addSubview:_tableView];
         [_tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JokeTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([JokeTableViewCell class])];
+        _currentOffsetY = _tableView.contentOffset.y;
     }
     return _tableView;
 }
@@ -49,7 +51,8 @@
     NSString *url = [NSString stringWithFormat:@"%@%@?cat=%@&st=%lu&count=%lu&key=%@", JuHeIP, JuHeFunnyList, _listType, (unsigned long)pageNum, (unsigned long)pageSize, JuHeFunnyAppKey];
     __weak JuHeTableViewController *weakSelf = self;
     [[PINCache sharedCache]objectForKey:url block:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
-        if (object&&[object isKindOfClass:[NSDictionary class]]) {
+        //首次加载到数据
+        if (object&&[object isKindOfClass:[NSDictionary class]]&&object[@"result"][@"data"] > 0) {
             if (weakSelf) {
                 [weakSelf parseJsonToDicWithDic:object withUrl:url];
             }
@@ -63,6 +66,7 @@
             }];
         }
     }];
+    //NSURLErrorNotConnectedToInternet -1009连不上后台
 }
 - (void)parseJsonToDicWithDic:(NSDictionary *)dic withUrl:(NSString *)url{
     if (dic&&[dic isKindOfClass:[NSDictionary class]]) {
@@ -81,19 +85,22 @@
     });
 }
 - (void)addHeightParameterWithHeight:(FunnyItem *)item{
-    item.title = [NSString stringWithFormat:@"        %@", item.title];
+    item.approveNum = 8888;
+    item.isApprove = YES;
+    item.isDisapprove = NO;
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineSpacing = 15.0f;
+    paragraphStyle.lineSpacing = 10.0f;
     paragraphStyle.minimumLineHeight = 15.0f;
     paragraphStyle.maximumLineHeight = 15.0f;
-    NSDictionary *attributes = @{NSParagraphStyleAttributeName : paragraphStyle, NSFontAttributeName: [UIFont systemFontOfSize:15.0f], NSForegroundColorAttributeName: [UIColor lightGrayColor]};
-    CGRect rect = [item.title boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - (46.0f + 15.0f), CGFLOAT_MAX)
+    NSDictionary *attributes = @{NSParagraphStyleAttributeName : paragraphStyle, NSFontAttributeName: [UIFont fontWithName:@"FZY3K--GB1-0" size:15.0f], NSForegroundColorAttributeName: [EQXColor colorWithHexString:@"#686868"]};
+    CGRect rect = [item.title boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - (25.0f + 15.0f), CGFLOAT_MAX)
                                           options:NSStringDrawingUsesLineFragmentOrigin
                                        attributes:attributes
                                           context:nil];
     NSAttributedString * subString = [[NSAttributedString alloc] initWithString:item.title attributes:attributes];
     item.titleAttr = subString;
-    item.titleHeight = rect.size.height + 25.0f;
+    //额外+5.0f的高度
+    item.titleHeight = rect.size.height + 65;
 }
 - (EQXRequest *)request{
     if (!_request) {
@@ -108,13 +115,22 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     JokeTableViewCell *cell = (JokeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JokeTableViewCell class]) forIndexPath:indexPath];
+    cell.selectedBackgroundView = [[UIView alloc]initWithFrame:cell.frame];
+    cell.selectedBackgroundView.backgroundColor = [EQXColor colorWithHexString:@"#e6e6e6"];
     FunnyItem *item = _listArray[indexPath.row];
-    [cell.jokeTitleLabel setAttributedText:item.titleAttr];
+    [cell updateCellWithItem:item];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     FunnyItem *item = _listArray[indexPath.row];
     return item.titleHeight;
 }
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (!self.navigationController.navigationBarHidden&&scrollView.contentOffset.y - _currentOffsetY > 10.0f) {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    }else if(self.navigationController.navigationBarHidden&&scrollView.contentOffset.y - _currentOffsetY < -10.0f){
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+    }
+    _currentOffsetY = scrollView.contentOffset.y;
+}
 @end
