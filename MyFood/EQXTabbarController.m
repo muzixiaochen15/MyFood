@@ -58,5 +58,7 @@
     self.viewControllers = [NSArray arrayWithObjects:leftNav, middleNav, rightNav, nil];
     [self.tabBar setTintColor:[EQXColor colorWithHexString:@"#56c6ff"]];
 }
-
+- (BOOL)prefersStatusBarHidden{
+    return NO;
+}
 @end

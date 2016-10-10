@@ -26,6 +26,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIApplication sharedApplication]setStatusBarHidden:NO];
     [self addShareSdkCode];
     EQXTabbarController *eqxTabVC = [[EQXTabbarController alloc]init];
     [self.window setRootViewController:eqxTabVC];

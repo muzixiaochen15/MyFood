@@ -14,25 +14,44 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - MBProgressHUD (1.0.0)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
   - PINCache (3.0.1-beta)
   - pop (1.0.9)
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - FMDB (~> 2.6.2)
   - MBProgressHUD (~> 1.0.0)
+  - MMDrawerController (~> 0.6.0)
   - PINCache (~> 3.0.1-beta)
   - pop (~> 1.0.9)
   - PureLayout (~> 3.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: e106bbd74d3f77221cbd34e113ae77ae0ab794dc
+PODFILE CHECKSUM: c42839ae840f4c322b07482772a3d89cc7178ef4
 
 COCOAPODS: 1.1.0.beta.1
