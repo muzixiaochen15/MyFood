@@ -5,11 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Y_fangzheng_zhunyuan.ttf">
-            <string>FZY3K--GB1-0</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WordDetailViewController">
             <connections>
@@ -99,7 +94,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="FAA-3l-fOd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FZY3K--GB1-0" family="FZZhunYuan-GB-YS" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>

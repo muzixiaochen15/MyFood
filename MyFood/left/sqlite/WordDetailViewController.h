@@ -16,5 +16,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *wordNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *wordDetailLabel;
 
-
 @end
