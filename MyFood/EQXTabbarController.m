@@ -11,10 +11,9 @@
 #import "ViewController.h"
 #import "LeftViewController.h"
 #import "MiddleCollectionViewController.h"
-#import "RightViewController.h"
+#import "MyFood-Swift.h"
 
 @implementation EQXTabbarController
-
 - (void)viewDidLoad{
     [super viewDidLoad];
     LeftViewController *leftVC = [[LeftViewController alloc]init];

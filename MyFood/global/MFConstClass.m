@@ -9,6 +9,13 @@
 #import "MFConstClass.h"
 #import <objc/runtime.h>
 
+@interface MFConstClass ()
+{
+    ///网络状态
+    Reachability *reach;
+}
+@end
+
 @implementation MFConstClass
 
 + (UIColor *)getRandomColor{
@@ -77,5 +84,17 @@
     }
     return dataArray;
 }
-
+static NSString *TEST_NETWORK_HOST = @"www.baidu.com";
+- (void)getNetworkStatus{
+    reach = [Reachability reachabilityWithHostName:TEST_NETWORK_HOST];
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(reachabilityChanged)
+                                                name:kReachabilityChangedNotification
+                                              object:nil];
+    [reach startNotifier];
+}
+- (NetworkStatus)reachabilityChanged{
+    NetworkStatus status = [reach currentReachabilityStatus];
+    return status;
+}
 @end

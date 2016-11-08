@@ -8,4 +8,5 @@ pod 'MBProgressHUD', '~> 1.0.0'
 pod 'PINCache', '~> 3.0.1-beta'
 pod 'FMDB', '~> 2.6.2'
 #pod 'ZSSRichTextEditor', '~> 0.3'
+pod 'Reachability', '~> 3.2'
 end

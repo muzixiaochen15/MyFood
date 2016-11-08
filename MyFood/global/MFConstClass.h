@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Reachability/Reachability.h"
 
 @interface MFConstClass : NSObject
 //@property (nonatomic, weak) NSMutableArray *dataArray;
@@ -19,4 +20,6 @@
 + (NSArray *)getVariableNameOfObject:(id)object;
 ///解析列表
 + (NSMutableArray *)parseListWithItemClassName:(NSString *)className withList:(NSArray *)array;
+/** 监听网络状态 */
+- (NetworkStatus)reachabilityChanged;
 @end
