@@ -11,8 +11,9 @@
 #import "PureLayout/PureLayout.h"
 #import <WebKit/WebKit.h>
 
-@interface RightViewController ()<WKNavigationDelegate, WKUIDelegate>{
+@interface RightViewController ()<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>{
     WKWebView *_webView;
+    CGFloat _currentOffsetY;
 }
 
 @end
@@ -38,6 +39,11 @@
     _webView.allowsBackForwardNavigationGestures = YES;
     [_webView.scrollView setDecelerationRate:1.0f];
     _webView.opaque = NO;
+    _webView.scrollView.delegate = self;
+
+    id scrollDelegate = _webView.scrollView.delegate;
+    _webView.scrollView.delegate = nil;
+    _webView.scrollView.delegate = scrollDelegate;
     _webView.navigationDelegate = self;
     _webView.UIDelegate = self;
     _webView.backgroundColor = [EQXColor colorWithHexString:@"#f4f4f4"];
@@ -79,6 +85,16 @@
     if (_webView.canGoForward) {
         [_webView goForward];
     }
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (!self.navigationController.navigationBarHidden&&scrollView.contentOffset.y - _currentOffsetY > 10.0f) {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.tabBarController.tabBar setHidden:YES];
+    }else if(self.navigationController.navigationBarHidden&&scrollView.contentOffset.y - _currentOffsetY < -10.0f){
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [self.tabBarController.tabBar setHidden:NO];
+    }
+    _currentOffsetY = scrollView.contentOffset.y;
 }
 #pragma mark - WKNavigationDelegate、WKUIDelegate
 // 创建一个新的WebView

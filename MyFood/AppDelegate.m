@@ -27,6 +27,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication]setStatusBarHidden:NO];
+    NSURLCache *cache = [[NSURLCache alloc]initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:cache];
+    
     [self addShareSdkCode];
     EQXTabbarController *eqxTabVC = [[EQXTabbarController alloc]init];
     [self.window setRootViewController:eqxTabVC];
