@@ -14,7 +14,6 @@
 		6B1527B81D753AE00002CCCB /* UIView+CategoryDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1527B71D753AE00002CCCB /* UIView+CategoryDemo.m */; };
 		6B1527CC1D75777D0002CCCB /* V2exViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1527CB1D75777D0002CCCB /* V2exViewController.m */; };
 		6B1FB6941D8E2F110028830A /* EQXRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1FB6931D8E2F110028830A /* EQXRequest.m */; };
-		6B2630A41DB4AD370048B11A /* SwiftWritePractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2630A31DB4AD370048B11A /* SwiftWritePractice.swift */; };
 		6B2C1A5F1D77FAD10046F7B5 /* SLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C1A5D1D77FAD10046F7B5 /* SLinkList.c */; };
 		6B2C23F61D6A9C56002A30B9 /* YPPhotos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C23F51D6A9C56002A30B9 /* YPPhotos.xcassets */; };
 		6B2CAECB1D59793D0007A131 /* biaoqingku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAECA1D59793D0007A131 /* biaoqingku@2x.png */; };
@@ -33,7 +32,6 @@
 		6B2CAEEB1D597FF80007A131 /* EGORefreshTablLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAEDD1D597FF80007A131 /* EGORefreshTablLeftView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B2CAEF31D59B98E0007A131 /* cryingFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */; };
 		6B2CAEF71D59C4350007A131 /* 背景图@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF61D59C4350007A131 /* 背景图@2x.png */; };
-		6B3267851DAC91AB00F30618 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3267841DAC91AB00F30618 /* RightViewController.swift */; };
 		6B370BE61D9A1E0400829E88 /* duanzi_button_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B370BDD1D9A1E0400829E88 /* duanzi_button_normal@2x.png */; };
 		6B370BE71D9A1E0400829E88 /* duanzi_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B370BDE1D9A1E0400829E88 /* duanzi_down@2x.png */; };
 		6B370BE81D9A1E0400829E88 /* duanzi_down_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B370BDF1D9A1E0400829E88 /* duanzi_down_selected@2x.png */; };
@@ -134,6 +132,8 @@
 		6BCABC0A1D66F31E0007BED8 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC091D66F31E0007BED8 /* UIView+Category.m */; };
 		6BCABC0D1D66F37C0007BED8 /* UIViewController+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC0C1D66F37C0007BED8 /* UIViewController+Frame.m */; };
 		6BCABC101D66FA220007BED8 /* PhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC0F1D66FA220007BED8 /* PhotoCollectionController.m */; };
+		6BD353231DD423E3004F2700 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD353221DD423E3004F2700 /* RightViewController.m */; };
+		6BD353261DD462DC004F2700 /* 返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD353251DD462DC004F2700 /* 返回@3x.png */; };
 		6BDDEE2C1D93D93C00FD129E /* FunnyTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDEE2B1D93D93C00FD129E /* FunnyTypeItem.m */; };
 		6BDE645A1D585A6C00F3A83F /* SceneListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE64591D585A6C00F3A83F /* SceneListViewController.m */; };
 		6BDE645D1D585B5300F3A83F /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE645C1D585B5300F3A83F /* UIColor+CustomColors.m */; };
@@ -184,7 +184,6 @@
 		6B1527CB1D75777D0002CCCB /* V2exViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V2exViewController.m; sourceTree = "<group>"; };
 		6B1FB6921D8E2F110028830A /* EQXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EQXRequest.h; sourceTree = "<group>"; };
 		6B1FB6931D8E2F110028830A /* EQXRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQXRequest.m; sourceTree = "<group>"; };
-		6B2630A31DB4AD370048B11A /* SwiftWritePractice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWritePractice.swift; sourceTree = "<group>"; };
 		6B2C1A5D1D77FAD10046F7B5 /* SLinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SLinkList.c; sourceTree = "<group>"; };
 		6B2C1A5E1D77FAD10046F7B5 /* SLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLinkList.h; sourceTree = "<group>"; };
 		6B2C23F51D6A9C56002A30B9 /* YPPhotos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YPPhotos.xcassets; sourceTree = "<group>"; };
@@ -208,7 +207,6 @@
 		6B2CAEDE1D597FF80007A131 /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
 		6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cryingFace@2x.png"; sourceTree = "<group>"; };
 		6B2CAEF61D59C4350007A131 /* 背景图@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景图@2x.png"; sourceTree = "<group>"; };
-		6B3267841DAC91AB00F30618 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 		6B370BDD1D9A1E0400829E88 /* duanzi_button_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanzi_button_normal@2x.png"; sourceTree = "<group>"; };
 		6B370BDE1D9A1E0400829E88 /* duanzi_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanzi_down@2x.png"; sourceTree = "<group>"; };
 		6B370BDF1D9A1E0400829E88 /* duanzi_down_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanzi_down_selected@2x.png"; sourceTree = "<group>"; };
@@ -384,6 +382,9 @@
 		6BCABC0C1D66F37C0007BED8 /* UIViewController+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Frame.m"; sourceTree = "<group>"; };
 		6BCABC0E1D66FA220007BED8 /* PhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionController.h; sourceTree = "<group>"; };
 		6BCABC0F1D66FA220007BED8 /* PhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionController.m; sourceTree = "<group>"; };
+		6BD353211DD423E3004F2700 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		6BD353221DD423E3004F2700 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		6BD353251DD462DC004F2700 /* 返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@3x.png"; sourceTree = "<group>"; };
 		6BDDEE2A1D93D93C00FD129E /* FunnyTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyTypeItem.h; sourceTree = "<group>"; };
 		6BDDEE2B1D93D93C00FD129E /* FunnyTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyTypeItem.m; sourceTree = "<group>"; };
 		6BDE64581D585A6C00F3A83F /* SceneListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneListViewController.h; sourceTree = "<group>"; };
@@ -579,8 +580,8 @@
 		6B32677B1DAC81AF00F30618 /* right */ = {
 			isa = PBXGroup;
 			children = (
-				6B3267841DAC91AB00F30618 /* RightViewController.swift */,
-				6B2630A31DB4AD370048B11A /* SwiftWritePractice.swift */,
+				6BD353211DD423E3004F2700 /* RightViewController.h */,
+				6BD353221DD423E3004F2700 /* RightViewController.m */,
 			);
 			path = right;
 			sourceTree = "<group>";
@@ -829,6 +830,7 @@
 		6B935D881D138A66004A9421 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				6BD353241DD462DC004F2700 /* webview */,
 				6B370BDC1D9A1E0400829E88 /* 赞 */,
 				6B7449841D9916260005CF3B /* Y_fangzheng_zhunyuan.ttf */,
 				6B2CAEC91D59793D0007A131 /* 列表 */,
@@ -998,6 +1000,14 @@
 				6BCABC001D66F2200007BED8 /* YPPhotoBrowerDataSource.m */,
 			);
 			path = BrowerController;
+			sourceTree = "<group>";
+		};
+		6BD353241DD462DC004F2700 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				6BD353251DD462DC004F2700 /* 返回@3x.png */,
+			);
+			path = webview;
 			sourceTree = "<group>";
 		};
 		6BDE64481D58557E00F3A83F /* ViewController */ = {
@@ -1291,6 +1301,7 @@
 				6B7449851D9916260005CF3B /* Y_fangzheng_zhunyuan.ttf in Resources */,
 				6BE600161D9BC5F1000B69FC /* WeiboSDK.bundle in Resources */,
 				6B2CAEE71D597FF80007A131 /* whiteArrow.png in Resources */,
+				6BD353261DD462DC004F2700 /* 返回@3x.png in Resources */,
 				6B4C36711DA8CE8400FDD0D5 /* WordDetailViewController.xib in Resources */,
 				6B370BEB1D9A1E0400829E88 /* icon_share@2x.png in Resources */,
 				6BB1225B1D13FFF600CA99EB /* icon-60@3x.png in Resources */,
@@ -1408,7 +1419,6 @@
 				6B95D8241D6D84BF00EEC06F /* CaptureInvoke.swift in Sources */,
 				6B4C36701DA8CE8400FDD0D5 /* WordDetailViewController.m in Sources */,
 				6BF9F9641D65459A004BBA18 /* FontStoreViewController.m in Sources */,
-				6B2630A41DB4AD370048B11A /* SwiftWritePractice.swift in Sources */,
 				6BCABBB01D66E31F0007BED8 /* PhotoGroupViewController.m in Sources */,
 				6B61F9FF1D90D5D900C3D599 /* ObjectClass.m in Sources */,
 				6B3BCFF91D88DE23008AD938 /* JuHeTableViewController.m in Sources */,
@@ -1441,12 +1451,12 @@
 				6B40B9AD1D879BEF00A5840F /* AudioViewController.m in Sources */,
 				6B5D384E1D76701F009A03A3 /* UIControl+BlocksKit.m in Sources */,
 				6B67D0051D54896D0011AF01 /* EQXTabbarController.m in Sources */,
-				6B3267851DAC91AB00F30618 /* RightViewController.swift in Sources */,
 				6B764AD71D6C00DF0039CB44 /* Person.m in Sources */,
 				6B449AAA1D82610D00C3D27E /* SNLoading.m in Sources */,
 				6BCABC031D66F2200007BED8 /* YPPhotoBrowerController.m in Sources */,
 				6B67CFFF1D547EEB0011AF01 /* EQXDataUtils.m in Sources */,
 				6BFA29041D35EB3C00A201AC /* IconItem.m in Sources */,
+				6BD353231DD423E3004F2700 /* RightViewController.m in Sources */,
 				6BCABC011D66F2200007BED8 /* YPPhotoBrowerCDelegate.m in Sources */,
 				6BF9F9631D65459A004BBA18 /* FontStoreTableView.m in Sources */,
 				6BF9F9681D6546C0004BBA18 /* MultiThreadViewController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "LeftViewController.h"
 #import "MiddleCollectionViewController.h"
 #import "MyFood-Swift.h"
+#import "RightViewController.h"
 
 @implementation EQXTabbarController
 - (void)viewDidLoad{

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.title = @"";
     [self.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
-    _verififyArrays = @[@"数字、26个英文字母组成的字符串", @"长度为8-10的用户密码（以字母开头、数字、下划线）", @"验证输入只能是汉字", @"电子邮箱验证", @"电子邮箱验证", @"URL地址验证", @"电话号码的验证", @"简单的身份证号验证"];
+    _verififyArrays = @[@"数字、26个英文字母组成的字符串", @"长度为8-10的用户密码（以字母开头、数字、下划线）", @"验证输入只能是汉字", @"电子邮箱验证",  @"URL地址验证", @"电话号码的验证", @"简单的身份证号验证"];
     [self addConfigureViews];
 }
 - (void)addConfigureViews{
@@ -65,7 +65,6 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [self selectRegularType:indexPath.row + 1];
     _tempType = indexPath.row + 1;
 }
 - (BOOL)selectRegularType:(RegularType)type{
