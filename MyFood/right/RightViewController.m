@@ -10,6 +10,7 @@
 #import "EQXColor.h"
 #import "PureLayout/PureLayout.h"
 #import <WebKit/WebKit.h>
+#import "SNLoading.h"
 
 @interface RightViewController ()<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>{
     WKWebView *_webView;
@@ -37,7 +38,7 @@
     _webView = [[WKWebView alloc]initWithFrame:self.view.bounds configuration:configuration];
     _webView.translatesAutoresizingMaskIntoConstraints = NO;
     _webView.allowsBackForwardNavigationGestures = YES;
-    [_webView.scrollView setDecelerationRate:1.0f];
+//    [_webView.scrollView setDecelerationRate:1.0f];
     _webView.opaque = NO;
     _webView.scrollView.delegate = self;
 
@@ -79,11 +80,15 @@
 - (void)backBtnClicked:(UIButton *)button{
     if (_webView.canGoBack) {
         [_webView goBack];
+    }else{
+        [SNLoading showMessageWithText:@"no back!"];
     }
 }
 - (void)forwardBtnClicked:(UIButton *)button{
     if (_webView.canGoForward) {
         [_webView goForward];
+    }else{
+        [SNLoading showMessageWithText:@"no forward!"];
     }
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

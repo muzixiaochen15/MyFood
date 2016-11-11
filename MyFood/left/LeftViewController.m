@@ -20,6 +20,7 @@
 #import "VideoViewController.h"
 #import "Audio/AudioViewController.h"
 #import "RegularExpressionsController.h"
+#import "AddressListViewController.h"
 
 @interface LeftViewController()
 
@@ -89,7 +90,8 @@
                    @[@"scan code", [ScanCodeViewController class]],
                    @[@"video", [VideoViewController class]],
                    @[@"audio", [AudioViewController class]],
-                   @[@"regular", [RegularExpressionsController class]]
+                   @[@"regular", [RegularExpressionsController class]],
+                   @[@"address_list", [AddressListViewController class]]
                    ];
     [self.tableView registerClass:[MenuTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];

@@ -40,4 +40,16 @@ static MBProgressHUD *progressHud = nil;
     progressHud.label.text = title ? title: GBLocalizedString(@"loading");
     progressHud.detailsLabel.text = detailsText;
 }
++ (void)showMessageWithText:(NSString *)message{
+    MBProgressHUD *mb = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication].delegate window] animated:YES];
+    mb.mode = MBProgressHUDModeText;
+    mb.label.text = message;
+    mb.label.textColor = [UIColor whiteColor];
+    mb.bezelView.backgroundColor = [UIColor blackColor];
+    mb.margin = 10.0f;
+    [mb setOffset:CGPointMake(0.0f, 150.0f)];
+    [mb removeFromSuperViewOnHide];
+    [mb hideAnimated:YES afterDelay:2.0f];
+}
+
 @end

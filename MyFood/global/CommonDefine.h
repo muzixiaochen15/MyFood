@@ -13,6 +13,9 @@
 #import "SNLoading.h"
 
 #define IOS7  [[UIDevice currentDevice].systemVersion floatValue] >= 7.0f
+#define IOS8  [[UIDevice currentDevice].systemVersion floatValue] >= 8.0f
+#define IOS9  [[UIDevice currentDevice].systemVersion floatValue] >= 9.0f
+
 #define Screen_Width     [[UIScreen mainScreen] bounds].size.width
 #define Screen_Height   [[UIScreen mainScreen] bounds].size.height
 #define JUHEKEY  

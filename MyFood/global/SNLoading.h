@@ -12,4 +12,5 @@
 + (void)showWithTitle:(NSString *)title;
 + (void)hideWithTitle:(NSString *)title;
 + (void)updateWithTitle:(NSString *)title withDetailsText:(NSString *)detailsText;
++ (void)showMessageWithText:(NSString *)message;
 @end

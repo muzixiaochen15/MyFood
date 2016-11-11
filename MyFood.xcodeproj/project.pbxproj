@@ -60,6 +60,7 @@
 		6B40B9AD1D879BEF00A5840F /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B40B9AC1D879BEF00A5840F /* AudioViewController.m */; };
 		6B40B9B01D879DF000A5840F /* 南征北战-我的天空.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B40B9AF1D879DF000A5840F /* 南征北战-我的天空.mp3 */; };
 		6B449AAA1D82610D00C3D27E /* SNLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B449AA91D82610D00C3D27E /* SNLoading.m */; };
+		6B47190B1DD5608200C1E42B /* AddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B47190A1DD5608200C1E42B /* AddressListViewController.m */; };
 		6B4C36701DA8CE8400FDD0D5 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4C366E1DA8CE8400FDD0D5 /* WordDetailViewController.m */; };
 		6B4C36711DA8CE8400FDD0D5 /* WordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4C366F1DA8CE8400FDD0D5 /* WordDetailViewController.xib */; };
 		6B4C36731DA8F30800FDD0D5 /* detail_bg_image.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6B4C36721DA8F30800FDD0D5 /* detail_bg_image.JPG */; };
@@ -243,6 +244,8 @@
 		6B449AA71D825F7100C3D27E /* CommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		6B449AA81D82610D00C3D27E /* SNLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNLoading.h; sourceTree = "<group>"; };
 		6B449AA91D82610D00C3D27E /* SNLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNLoading.m; sourceTree = "<group>"; };
+		6B4719091DD5608200C1E42B /* AddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListViewController.h; sourceTree = "<group>"; };
+		6B47190A1DD5608200C1E42B /* AddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListViewController.m; sourceTree = "<group>"; };
 		6B4C366B1DA87CD700FDD0D5 /* WordTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordTest.h; sourceTree = "<group>"; };
 		6B4C366C1DA87F3000FDD0D5 /* WordTest2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordTest2.h; sourceTree = "<group>"; };
 		6B4C366D1DA8CE8400FDD0D5 /* WordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
@@ -667,6 +670,15 @@
 			path = resoures;
 			sourceTree = "<group>";
 		};
+		6B4719081DD5603800C1E42B /* addressList */ = {
+			isa = PBXGroup;
+			children = (
+				6B4719091DD5608200C1E42B /* AddressListViewController.h */,
+				6B47190A1DD5608200C1E42B /* AddressListViewController.m */,
+			);
+			name = addressList;
+			sourceTree = "<group>";
+		};
 		6B5169361DD16188007D9890 /* regular */ = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1039,7 @@
 		6BDE645E1D58600100F3A83F /* left */ = {
 			isa = PBXGroup;
 			children = (
+				6B4719081DD5603800C1E42B /* addressList */,
 				6B5169361DD16188007D9890 /* regular */,
 				6B40B9AA1D879B9E00A5840F /* Audio */,
 				6B01BDB91D7E5D3A0001B6AD /* video */,
@@ -1417,6 +1430,7 @@
 				6BCABBBB1D66E56C0007BED8 /* YPPhotoStoreConfiguraion.m in Sources */,
 				6BCABC021D66F2200007BED8 /* YPPhotoBrowerCell.m in Sources */,
 				6B95D8241D6D84BF00EEC06F /* CaptureInvoke.swift in Sources */,
+				6B47190B1DD5608200C1E42B /* AddressListViewController.m in Sources */,
 				6B4C36701DA8CE8400FDD0D5 /* WordDetailViewController.m in Sources */,
 				6BF9F9641D65459A004BBA18 /* FontStoreViewController.m in Sources */,
 				6BCABBB01D66E31F0007BED8 /* PhotoGroupViewController.m in Sources */,
