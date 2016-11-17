@@ -37,4 +37,6 @@ typedef NS_ENUM(NSInteger, RegularType) {
 @property (nonatomic, assign) RegularType tempType;
 
 @property (nonatomic, strong) MBProgressHUD *hub;
+
+@property (nonatomic, strong) UITextField *regularExpField;
 @end

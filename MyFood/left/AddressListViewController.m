@@ -12,6 +12,7 @@
 #import <AddressBook/ABPerson.h>
 #import <AddressBookUI/ABPersonViewController.h>
 #import "CommonDefine.h"
+#import "AViewController.h"
 
 @interface AddressListViewController ()<ABPersonViewControllerDelegate, ABPeoplePickerNavigationControllerDelegate>
 
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
-    
+    return;
     ABPeoplePickerNavigationController *abNav = [[ABPeoplePickerNavigationController alloc]init];
     abNav.peoplePickerDelegate = self;
     if ([getAppVersion() floatValue] >= 8.0f ) {
@@ -31,10 +32,9 @@
     [self presentViewController:abNav animated:YES completion:nil];
     
     ABAddressBookRef *abBookRef = ABAddressBookCreateWithOptions(nil, nil);
-    [abaddre]
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
+    [self presentViewController:[[AViewController alloc]init] animated:YES completion:nil];
 }
 //取消选择
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker

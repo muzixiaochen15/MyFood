@@ -133,6 +133,8 @@
 		6BCABC0A1D66F31E0007BED8 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC091D66F31E0007BED8 /* UIView+Category.m */; };
 		6BCABC0D1D66F37C0007BED8 /* UIViewController+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC0C1D66F37C0007BED8 /* UIViewController+Frame.m */; };
 		6BCABC101D66FA220007BED8 /* PhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC0F1D66FA220007BED8 /* PhotoCollectionController.m */; };
+		6BCE53981DD5BAFB00FC8549 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE53971DD5BAFB00FC8549 /* AViewController.m */; };
+		6BCE539B1DD5BB0900FC8549 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE539A1DD5BB0900FC8549 /* BViewController.m */; };
 		6BD353231DD423E3004F2700 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD353221DD423E3004F2700 /* RightViewController.m */; };
 		6BD353261DD462DC004F2700 /* 返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD353251DD462DC004F2700 /* 返回@3x.png */; };
 		6BDDEE2C1D93D93C00FD129E /* FunnyTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDEE2B1D93D93C00FD129E /* FunnyTypeItem.m */; };
@@ -385,6 +387,10 @@
 		6BCABC0C1D66F37C0007BED8 /* UIViewController+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Frame.m"; sourceTree = "<group>"; };
 		6BCABC0E1D66FA220007BED8 /* PhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionController.h; sourceTree = "<group>"; };
 		6BCABC0F1D66FA220007BED8 /* PhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionController.m; sourceTree = "<group>"; };
+		6BCE53961DD5BAFB00FC8549 /* AViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = "<group>"; };
+		6BCE53971DD5BAFB00FC8549 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
+		6BCE53991DD5BB0900FC8549 /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		6BCE539A1DD5BB0900FC8549 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		6BD353211DD423E3004F2700 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		6BD353221DD423E3004F2700 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		6BD353251DD462DC004F2700 /* 返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@3x.png"; sourceTree = "<group>"; };
@@ -675,6 +681,10 @@
 			children = (
 				6B4719091DD5608200C1E42B /* AddressListViewController.h */,
 				6B47190A1DD5608200C1E42B /* AddressListViewController.m */,
+				6BCE53961DD5BAFB00FC8549 /* AViewController.h */,
+				6BCE53971DD5BAFB00FC8549 /* AViewController.m */,
+				6BCE53991DD5BB0900FC8549 /* BViewController.h */,
+				6BCE539A1DD5BB0900FC8549 /* BViewController.m */,
 			);
 			name = addressList;
 			sourceTree = "<group>";
@@ -1442,6 +1452,7 @@
 				6B67D0021D5480CD0011AF01 /* NetworkInfo.m in Sources */,
 				6B4CFFB41D94D96D00989DC6 /* FunnyItem.m in Sources */,
 				6BCABBF61D66F0DA0007BED8 /* YPPhotosCell.m in Sources */,
+				6BCE539B1DD5BB0900FC8549 /* BViewController.m in Sources */,
 				6B370C341D9A55F800829E88 /* ShareClass.m in Sources */,
 				6BCABBEA1D66E8DF0007BED8 /* PHObject+SupportCategory.m in Sources */,
 				6B3BD0071D88F046008AD938 /* MiddleCollectionViewController.m in Sources */,
@@ -1486,6 +1497,7 @@
 				6BCABBDD1D66E6B20007BED8 /* MASConstraintMaker.m in Sources */,
 				6BF9F9621D65459A004BBA18 /* FontStoreRequest.m in Sources */,
 				6BCABBE41D66E6B20007BED8 /* ViewController+MASAdditions.m in Sources */,
+				6BCE53981DD5BAFB00FC8549 /* AViewController.m in Sources */,
 				6B935DAC1D138D23004A9421 /* CommUtls.m in Sources */,
 				6B935D6E1D138763004A9421 /* main.m in Sources */,
 				6BF9F95E1D65459A004BBA18 /* FontPriceTipView.m in Sources */,
