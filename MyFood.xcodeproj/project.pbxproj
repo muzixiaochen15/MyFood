@@ -73,6 +73,8 @@
 		6B54EE201D740E9A00709467 /* NewString.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B54EE1F1D740E9A00709467 /* NewString.m */; };
 		6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */; };
 		6B56A1841D6E7F0200B1C3BC /* MFConstUrlClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B56A1831D6E7F0200B1C3BC /* MFConstUrlClass.m */; };
+		6B59590E1DF02F9D009E371A /* PartAlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B59590D1DF02F9D009E371A /* PartAlphaViewController.m */; };
+		6B5959111DF02FD5009E371A /* PartAlphaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5959101DF02FD5009E371A /* PartAlphaView.m */; };
 		6B5D384E1D76701F009A03A3 /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D384D1D76701F009A03A3 /* UIControl+BlocksKit.m */; };
 		6B5F8B6E1D921A4C0047A5C8 /* IOSReflectionTabviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F8B6D1D921A4C0047A5C8 /* IOSReflectionTabviewController.m */; };
 		6B61F9FF1D90D5D900C3D599 /* ObjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B61F9FE1D90D5D900C3D599 /* ObjectClass.m */; };
@@ -271,6 +273,10 @@
 		6B56A1801D6E7EA400B1C3BC /* MFConstClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFConstClass.m; sourceTree = "<group>"; };
 		6B56A1821D6E7F0200B1C3BC /* MFConstUrlClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFConstUrlClass.h; sourceTree = "<group>"; };
 		6B56A1831D6E7F0200B1C3BC /* MFConstUrlClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFConstUrlClass.m; sourceTree = "<group>"; };
+		6B59590C1DF02F9D009E371A /* PartAlphaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartAlphaViewController.h; sourceTree = "<group>"; };
+		6B59590D1DF02F9D009E371A /* PartAlphaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartAlphaViewController.m; sourceTree = "<group>"; };
+		6B59590F1DF02FD5009E371A /* PartAlphaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartAlphaView.h; sourceTree = "<group>"; };
+		6B5959101DF02FD5009E371A /* PartAlphaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartAlphaView.m; sourceTree = "<group>"; };
 		6B5D384C1D76701F009A03A3 /* UIControl+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+BlocksKit.h"; path = "../UIControl+BlocksKit.h"; sourceTree = "<group>"; };
 		6B5D384D1D76701F009A03A3 /* UIControl+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+BlocksKit.m"; path = "../UIControl+BlocksKit.m"; sourceTree = "<group>"; };
 		6B5F8B6C1D921A4C0047A5C8 /* IOSReflectionTabviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSReflectionTabviewController.h; path = MyFood/middle/reflection/IOSReflectionTabviewController.h; sourceTree = SOURCE_ROOT; };
@@ -714,6 +720,17 @@
 			path = global;
 			sourceTree = "<group>";
 		};
+		6B59590B1DF02F84009E371A /* partAlpha */ = {
+			isa = PBXGroup;
+			children = (
+				6B59590C1DF02F9D009E371A /* PartAlphaViewController.h */,
+				6B59590D1DF02F9D009E371A /* PartAlphaViewController.m */,
+				6B59590F1DF02FD5009E371A /* PartAlphaView.h */,
+				6B5959101DF02FD5009E371A /* PartAlphaView.m */,
+			);
+			path = partAlpha;
+			sourceTree = "<group>";
+		};
 		6B5D384F1D76703E009A03A3 /* button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1049,6 +1066,7 @@
 		6BDE645E1D58600100F3A83F /* left */ = {
 			isa = PBXGroup;
 			children = (
+				6B59590B1DF02F84009E371A /* partAlpha */,
 				6B4719081DD5603800C1E42B /* addressList */,
 				6B5169361DD16188007D9890 /* regular */,
 				6B40B9AA1D879B9E00A5840F /* Audio */,
@@ -1451,6 +1469,7 @@
 				6BCABBA81D66D59E0007BED8 /* PhotoViewController.m in Sources */,
 				6B67D0021D5480CD0011AF01 /* NetworkInfo.m in Sources */,
 				6B4CFFB41D94D96D00989DC6 /* FunnyItem.m in Sources */,
+				6B5959111DF02FD5009E371A /* PartAlphaView.m in Sources */,
 				6BCABBF61D66F0DA0007BED8 /* YPPhotosCell.m in Sources */,
 				6BCE539B1DD5BB0900FC8549 /* BViewController.m in Sources */,
 				6B370C341D9A55F800829E88 /* ShareClass.m in Sources */,
@@ -1503,6 +1522,7 @@
 				6BF9F95E1D65459A004BBA18 /* FontPriceTipView.m in Sources */,
 				6B3BD0041D88E146008AD938 /* MiddleCollectionCell.m in Sources */,
 				6B5169391DD16205007D9890 /* RegularExpressionsController.m in Sources */,
+				6B59590E1DF02F9D009E371A /* PartAlphaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

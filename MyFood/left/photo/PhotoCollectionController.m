@@ -17,6 +17,7 @@
 @interface PhotoCollectionController ()<UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>{
     CGSize assetSize;
     NSArray <UIImage *> *assets;
+    YPPhotoStore *store;
 }
 @property (nonatomic, strong) UICollectionView *collectionView;
 @end
@@ -33,7 +34,7 @@
     assetSize = CGSizeMake(sizeHeight, sizeHeight);
     [self.view addSubview:self.collectionView];
     
-    YPPhotoStore *store = [YPPhotoStore new];
+    store = [YPPhotoStore new];
     [store checkGroupExist:@"new" result:^(BOOL isExist, PHAssetCollection * _Nullable collection) {
         if (isExist)
             NSLog(@"exist!");

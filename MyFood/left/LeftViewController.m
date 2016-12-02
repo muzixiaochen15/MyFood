@@ -21,6 +21,7 @@
 #import "Audio/AudioViewController.h"
 #import "RegularExpressionsController.h"
 #import "AddressListViewController.h"
+#import "PartAlphaViewController.h"
 
 @interface LeftViewController()
 
@@ -91,7 +92,8 @@
                    @[@"video", [VideoViewController class]],
                    @[@"audio", [AudioViewController class]],
                    @[@"regular", [RegularExpressionsController class]],
-                   @[@"address_list", [AddressListViewController class]]
+                   @[@"address_list", [AddressListViewController class]],
+                   @[@"part_show", [PartAlphaViewController class]]
                    ];
     [self.tableView registerClass:[MenuTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];

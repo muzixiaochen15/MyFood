@@ -1,7 +1,7 @@
 //
 //  RegularExpressionsController.m
 //  MyFood
-//
+
 //  Created by qunlee on 16/11/8.
 //  Copyright © 2016年 qunlee. All rights reserved.
 //
@@ -32,6 +32,7 @@
  *  \d+ ->666666、7777
  *  \b\w{6}\b ->Weller
  *  ^\d{5,12}$ -> 12345、1234567891011 （qq号）
+ *  ^//$  ->//一整行只有//，注意与\b的区别
  *  window\d+ ->window1
  *  ^\w+
  *  [aeiou]
@@ -42,7 +43,11 @@
  *  0\d{2}-\d{8}|0\d{3}-\d{7}
  *  \(?0\d{2}\)?[- ]?\d{8}|0\d{2}[- ]?\d{8} \d{5}-\d{4}|\d{5} -> (012)-12345678|012-12345678|……
  *  [^x] ->a
- *  [^aeiou] - >b
+ *  [^aeiou] ->b
+ *  \s+
+ *  <a[^>]+>
+ *  \W、\S、\D、\B反义
+ *  \b\w+(? ==)
  */
 - (void)addConfigureViews{
     _inputTextField = [UITextField newAutoLayoutView];
@@ -95,7 +100,6 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", _regularExpField.text];
     BOOL isValid = [predicate evaluateWithObject:_inputTextField.text];
     if (!isValid) {
-        NSLog(@"输入有误");
         [SNLoading showMessageWithText:@"输入有误,请重新输入"];
 //        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"输入有误,请重新输入" preferredStyle:UIAlertControllerStyleAlert];
 //        [self presentViewController:alert animated:YES completion:^{
