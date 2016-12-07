@@ -6,27 +6,24 @@
 //  Copyright © 2016年 qunlee. All rights reserved.
 //
 
-#import "RightViewController.h"
+#import "BokeDetailViewController.h"
 #import "EQXColor.h"
 #import "PureLayout/PureLayout.h"
 #import <WebKit/WebKit.h>
 #import "SNLoading.h"
 
-@interface RightViewController ()<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>{
+@interface BokeDetailViewController ()<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>{
     WKWebView *_webView;
     CGFloat _currentOffsetY;
 }
-
 @end
 
-@implementation RightViewController
+@implementation BokeDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [EQXColor colorWithHexString:@"#f6f6f6"];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"FZY3K--GB1-0" size:15.0f]}];
-    self.title = @"创作";
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"FZY3K--GB1-0" size:15.0f], NSForegroundColorAttributeName: [UIColor whiteColor]}];
     //初始化
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc]init];
     configuration.preferences = [[WKPreferences alloc]init];
@@ -74,8 +71,7 @@
     [forwardBtn autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:30.0f];
     [forwardBtn autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [forwardBtn autoSetDimensionsToSize:CGSizeMake(50.0f, 50.0f)];
-    
-    [_webView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://hit-alibaba.github.io/interview/"]]];
+    [_webView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:_urlString]]];
 }
 - (void)backBtnClicked:(UIButton *)button{
     if (_webView.canGoBack) {
@@ -113,13 +109,17 @@
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
     decisionHandler(WKNavigationResponsePolicyAllow);
 }
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    [SNLoading showWithTitle:@"正在加载..."];
+}
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    
+    self.title = webView.title;
+    [SNLoading hideWithTitle:@"加载完成"];
 }
 // 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
-    
+    [SNLoading hideWithTitle:@"加载失败"];
 }
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{

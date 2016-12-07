@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RightViewController : UIViewController
-
+@interface BokeDetailViewController : UIViewController
+@property (nonatomic, strong) NSString *urlString;
 @end

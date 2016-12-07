@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MultiThreadViewController : UIViewController
+@interface MultiThreadViewController : UITableViewController
 
 @end

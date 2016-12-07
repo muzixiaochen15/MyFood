@@ -83,7 +83,7 @@
 - (void)configureTableView{
     self.items = @[@[@"字体", [FontStoreViewController class]],
                    @[@"场景列表", [SceneListViewController class]],
-                   @[@"GCD", [MultiThreadViewController class]],
+                   @[@"Multi-threading", [MultiThreadViewController class]],
                    @[@"Sqlite", [SqliteViewController class]],
                    @[@"Photo", [PhotoCollectionController class]],
                    @[@"Memory manageMent", [MemoryManagementController class]],

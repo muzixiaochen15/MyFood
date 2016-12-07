@@ -10,6 +10,7 @@
 		6B01BDBC1D7E5D5B0001B6AD /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B01BDBB1D7E5D5B0001B6AD /* VideoViewController.m */; };
 		6B0351CD1D9E4ACB00F236E2 /* WordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0351CB1D9E4ACB00F236E2 /* WordCell.m */; };
 		6B0351CE1D9E4ACB00F236E2 /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0351CC1D9E4ACB00F236E2 /* WordCell.xib */; };
+		6B1133821DF7DE360048522D /* BokeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1133811DF7DE360048522D /* BokeListViewController.m */; };
 		6B1527B51D7533870002CCCB /* StringsClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1527B41D7533870002CCCB /* StringsClass.m */; };
 		6B1527B81D753AE00002CCCB /* UIView+CategoryDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1527B71D753AE00002CCCB /* UIView+CategoryDemo.m */; };
 		6B1527CC1D75777D0002CCCB /* V2exViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1527CB1D75777D0002CCCB /* V2exViewController.m */; };
@@ -84,6 +85,9 @@
 		6B67D0091D548B2B0011AF01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B67D0081D548B2B0011AF01 /* Assets.xcassets */; };
 		6B67D00C1D5495D40011AF01 /* EQXColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67D00B1D5495D40011AF01 /* EQXColor.m */; };
 		6B69E9C51D795E9300B51543 /* ScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B69E9C41D795E9300B51543 /* ScanCodeViewController.m */; };
+		6B7394A01DF68E38001951BE /* NSThreadDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B73949F1DF68E38001951BE /* NSThreadDemoViewController.m */; };
+		6B7394A31DF68E5E001951BE /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7394A21DF68E5E001951BE /* NSOperationDemoController.m */; };
+		6B7394A61DF68E7A001951BE /* GCDDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7394A51DF68E7A001951BE /* GCDDemoViewController.m */; };
 		6B7449851D9916260005CF3B /* Y_fangzheng_zhunyuan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B7449841D9916260005CF3B /* Y_fangzheng_zhunyuan.ttf */; };
 		6B764AD41D6C00350039CB44 /* MemoryManagementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B764AD31D6C00350039CB44 /* MemoryManagementController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B764AD71D6C00DF0039CB44 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B764AD61D6C00DF0039CB44 /* Person.m */; };
@@ -137,7 +141,7 @@
 		6BCABC101D66FA220007BED8 /* PhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCABC0F1D66FA220007BED8 /* PhotoCollectionController.m */; };
 		6BCE53981DD5BAFB00FC8549 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE53971DD5BAFB00FC8549 /* AViewController.m */; };
 		6BCE539B1DD5BB0900FC8549 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE539A1DD5BB0900FC8549 /* BViewController.m */; };
-		6BD353231DD423E3004F2700 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD353221DD423E3004F2700 /* RightViewController.m */; };
+		6BD353231DD423E3004F2700 /* BokeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD353221DD423E3004F2700 /* BokeDetailViewController.m */; };
 		6BD353261DD462DC004F2700 /* 返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BD353251DD462DC004F2700 /* 返回@3x.png */; };
 		6BDDEE2C1D93D93C00FD129E /* FunnyTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDDEE2B1D93D93C00FD129E /* FunnyTypeItem.m */; };
 		6BDE645A1D585A6C00F3A83F /* SceneListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE64591D585A6C00F3A83F /* SceneListViewController.m */; };
@@ -181,6 +185,8 @@
 		6B0351CA1D9E4ACB00F236E2 /* WordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCell.h; sourceTree = "<group>"; };
 		6B0351CB1D9E4ACB00F236E2 /* WordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCell.m; sourceTree = "<group>"; };
 		6B0351CC1D9E4ACB00F236E2 /* WordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCell.xib; sourceTree = "<group>"; };
+		6B1133801DF7DE360048522D /* BokeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BokeListViewController.h; sourceTree = "<group>"; };
+		6B1133811DF7DE360048522D /* BokeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BokeListViewController.m; sourceTree = "<group>"; };
 		6B1527B31D7533870002CCCB /* StringsClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringsClass.h; sourceTree = "<group>"; };
 		6B1527B41D7533870002CCCB /* StringsClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringsClass.m; sourceTree = "<group>"; };
 		6B1527B61D753AE00002CCCB /* UIView+CategoryDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CategoryDemo.h"; sourceTree = "<group>"; };
@@ -294,6 +300,12 @@
 		6B67D00B1D5495D40011AF01 /* EQXColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EQXColor.m; sourceTree = "<group>"; };
 		6B69E9C31D795E9300B51543 /* ScanCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanCodeViewController.h; sourceTree = "<group>"; };
 		6B69E9C41D795E9300B51543 /* ScanCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanCodeViewController.m; sourceTree = "<group>"; };
+		6B73949E1DF68E38001951BE /* NSThreadDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadDemoViewController.h; sourceTree = "<group>"; };
+		6B73949F1DF68E38001951BE /* NSThreadDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadDemoViewController.m; sourceTree = "<group>"; };
+		6B7394A11DF68E5E001951BE /* NSOperationDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoController.h; sourceTree = "<group>"; };
+		6B7394A21DF68E5E001951BE /* NSOperationDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationDemoController.m; sourceTree = "<group>"; };
+		6B7394A41DF68E7A001951BE /* GCDDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDDemoViewController.h; sourceTree = "<group>"; };
+		6B7394A51DF68E7A001951BE /* GCDDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDDemoViewController.m; sourceTree = "<group>"; };
 		6B7449841D9916260005CF3B /* Y_fangzheng_zhunyuan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Y_fangzheng_zhunyuan.ttf; sourceTree = "<group>"; };
 		6B764AD21D6C00350039CB44 /* MemoryManagementController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryManagementController.h; sourceTree = "<group>"; };
 		6B764AD31D6C00350039CB44 /* MemoryManagementController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManagementController.m; sourceTree = "<group>"; };
@@ -397,8 +409,8 @@
 		6BCE53971DD5BAFB00FC8549 /* AViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
 		6BCE53991DD5BB0900FC8549 /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
 		6BCE539A1DD5BB0900FC8549 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
-		6BD353211DD423E3004F2700 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
-		6BD353221DD423E3004F2700 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		6BD353211DD423E3004F2700 /* BokeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BokeDetailViewController.h; sourceTree = "<group>"; };
+		6BD353221DD423E3004F2700 /* BokeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BokeDetailViewController.m; sourceTree = "<group>"; };
 		6BD353251DD462DC004F2700 /* 返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@3x.png"; sourceTree = "<group>"; };
 		6BDDEE2A1D93D93C00FD129E /* FunnyTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyTypeItem.h; sourceTree = "<group>"; };
 		6BDDEE2B1D93D93C00FD129E /* FunnyTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyTypeItem.m; sourceTree = "<group>"; };
@@ -595,8 +607,10 @@
 		6B32677B1DAC81AF00F30618 /* right */ = {
 			isa = PBXGroup;
 			children = (
-				6BD353211DD423E3004F2700 /* RightViewController.h */,
-				6BD353221DD423E3004F2700 /* RightViewController.m */,
+				6BD353211DD423E3004F2700 /* BokeDetailViewController.h */,
+				6BD353221DD423E3004F2700 /* BokeDetailViewController.m */,
+				6B1133801DF7DE360048522D /* BokeListViewController.h */,
+				6B1133811DF7DE360048522D /* BokeListViewController.m */,
 			);
 			path = right;
 			sourceTree = "<group>";
@@ -1203,6 +1217,12 @@
 			children = (
 				6BF9F9661D6546C0004BBA18 /* MultiThreadViewController.h */,
 				6BF9F9671D6546C0004BBA18 /* MultiThreadViewController.m */,
+				6B73949E1DF68E38001951BE /* NSThreadDemoViewController.h */,
+				6B73949F1DF68E38001951BE /* NSThreadDemoViewController.m */,
+				6B7394A11DF68E5E001951BE /* NSOperationDemoController.h */,
+				6B7394A21DF68E5E001951BE /* NSOperationDemoController.m */,
+				6B7394A41DF68E7A001951BE /* GCDDemoViewController.h */,
+				6B7394A51DF68E7A001951BE /* GCDDemoViewController.m */,
 			);
 			path = "Multi Thread";
 			sourceTree = "<group>";
@@ -1456,6 +1476,7 @@
 				6BCABBE11D66E6B20007BED8 /* NSArray+MASAdditions.m in Sources */,
 				6BDE645A1D585A6C00F3A83F /* SceneListViewController.m in Sources */,
 				6BCABBBB1D66E56C0007BED8 /* YPPhotoStoreConfiguraion.m in Sources */,
+				6B7394A61DF68E7A001951BE /* GCDDemoViewController.m in Sources */,
 				6BCABC021D66F2200007BED8 /* YPPhotoBrowerCell.m in Sources */,
 				6B95D8241D6D84BF00EEC06F /* CaptureInvoke.swift in Sources */,
 				6B47190B1DD5608200C1E42B /* AddressListViewController.m in Sources */,
@@ -1465,6 +1486,7 @@
 				6B61F9FF1D90D5D900C3D599 /* ObjectClass.m in Sources */,
 				6B3BCFF91D88DE23008AD938 /* JuHeTableViewController.m in Sources */,
 				6BCABC0A1D66F31E0007BED8 /* UIView+Category.m in Sources */,
+				6B1133821DF7DE360048522D /* BokeListViewController.m in Sources */,
 				6B69E9C51D795E9300B51543 /* ScanCodeViewController.m in Sources */,
 				6BCABBA81D66D59E0007BED8 /* PhotoViewController.m in Sources */,
 				6B67D0021D5480CD0011AF01 /* NetworkInfo.m in Sources */,
@@ -1480,6 +1502,7 @@
 				6BCABBDE1D66E6B20007BED8 /* MASLayoutConstraint.m in Sources */,
 				6BBE6E451D66B83A004E7834 /* SqliteViewController.m in Sources */,
 				6BDDEE2C1D93D93C00FD129E /* FunnyTypeItem.m in Sources */,
+				6B7394A01DF68E38001951BE /* NSThreadDemoViewController.m in Sources */,
 				6BDE645D1D585B5300F3A83F /* UIColor+CustomColors.m in Sources */,
 				6BDE64661D58600100F3A83F /* LeftViewController.m in Sources */,
 				6B54EE1D1D73C8ED00709467 /* TestListCell.m in Sources */,
@@ -1500,7 +1523,7 @@
 				6BCABC031D66F2200007BED8 /* YPPhotoBrowerController.m in Sources */,
 				6B67CFFF1D547EEB0011AF01 /* EQXDataUtils.m in Sources */,
 				6BFA29041D35EB3C00A201AC /* IconItem.m in Sources */,
-				6BD353231DD423E3004F2700 /* RightViewController.m in Sources */,
+				6BD353231DD423E3004F2700 /* BokeDetailViewController.m in Sources */,
 				6BCABC011D66F2200007BED8 /* YPPhotoBrowerCDelegate.m in Sources */,
 				6BF9F9631D65459A004BBA18 /* FontStoreTableView.m in Sources */,
 				6BF9F9681D6546C0004BBA18 /* MultiThreadViewController.m in Sources */,
@@ -1509,6 +1532,7 @@
 				6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */,
 				6B1FB6941D8E2F110028830A /* EQXRequest.m in Sources */,
 				6BCABBE01D66E6B20007BED8 /* MASViewConstraint.m in Sources */,
+				6B7394A31DF68E5E001951BE /* NSOperationDemoController.m in Sources */,
 				6B54EE1A1D73C86B00709467 /* ListTestViewController.m in Sources */,
 				6B2CAEEA1D597FF80007A131 /* EGORefreshTableHeaderView.m in Sources */,
 				6B935D871D138821004A9421 /* RNFrostedSidebar.m in Sources */,

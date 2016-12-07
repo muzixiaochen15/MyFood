@@ -127,6 +127,7 @@
     TestListCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TestListCell class])
                                                               forIndexPath:indexPath];
     cell.listTitleLabel.text = [self.items[indexPath.row] firstObject];
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     [[UIProgressView appearance] setProgressTintColor:[EQXColor colorWithHexString:@"#50b440"]];
     cell.proview.progress = 0.01;
     return cell;

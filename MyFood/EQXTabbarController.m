@@ -12,7 +12,7 @@
 #import "LeftViewController.h"
 #import "MiddleCollectionViewController.h"
 #import "MyFood-Swift.h"
-#import "RightViewController.h"
+#import "BokeListViewController.h"
 
 @implementation EQXTabbarController
 - (void)viewDidLoad{
@@ -42,12 +42,12 @@
     UITabBarItem *midItem = [[UITabBarItem alloc]initWithTitle:@"文本" image:[UIImage imageNamed:@"tabbarNoSelectScene"] selectedImage:[[UIImage imageNamed:@"tabbarSelectScene"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     middleNav.tabBarItem = midItem;
     
-    RightViewController *rightVC = [[RightViewController alloc]init];
+    BokeListViewController *rightVC = [[BokeListViewController alloc]init];
     [rightVC.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
     UINavigationController *rightNav = [[UINavigationController alloc]initWithRootViewController:rightVC];
     [rightNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#e13e3f"]];
     rightNav.navigationBar.tintColor = [UIColor whiteColor];
-    rightNav.navigationBar.topItem.title = @"创作";
+    rightNav.navigationBar.topItem.title = @"网络📚";
     [rightNav.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [rightNav.navigationBar setTranslucent:NO];

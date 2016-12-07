@@ -1,48 +1,44 @@
 //
-//  MultiThreadViewController.m
+//  BokeListViewController.m
 //  MyFood
 //
-//  Created by qunlee on 16/8/18.
+//  Created by qunlee on 16/12/7.
 //  Copyright © 2016年 qunlee. All rights reserved.
 //
 
-#import "MultiThreadViewController.h"
-#import "PureLayout.h"
+#import "BokeListViewController.h"
 #import "EQXColor.h"
-#import "NSThreadDemoViewController.h"
-#import "NSOperationDemoController.h"
-#import "GCDDemoViewController.h"
 #import "MenuTableViewCell.h"
+#import "BokeDetailViewController.h"
 
-@interface MultiThreadViewController (){
+@interface BokeListViewController (){
     NSArray *items;
 }
 @end
 
-@implementation MultiThreadViewController
+@implementation BokeListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"多线程";
     self.view.backgroundColor = [EQXColor colorWithHexString:@"#f8f8f8"];
-
-    items = @[@[@"NSThread", [NSThreadDemoViewController class]],
-              @[@"NSOperation", [NSOperationDemoController class]],
-              @[@"GCD", [GCDDemoViewController class]]
+    
+    items = @[@[@"https://hit-alibaba.github.io/interview/", [BokeDetailViewController class]],
+              @[@"https://hjgitbook.gitbooks.io/ios/content/", [BokeDetailViewController class]],
+              @[@"网页3", [BokeDetailViewController class]]
               ];
     [self.tableView registerClass:[MenuTableViewCell class]
            forCellReuseIdentifier:NSStringFromClass([MenuTableViewCell class])];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.rowHeight = 50.0f;
-    
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return items.count;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *viewController = [[items[indexPath.row]lastObject] new];
-    viewController.title = [items[indexPath.row] firstObject];
+    BokeDetailViewController *viewController = [[items[indexPath.row]lastObject] new];
     viewController.hidesBottomBarWhenPushed = YES;
+    viewController.urlString = [items[indexPath.row] firstObject];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -51,4 +47,5 @@
     cell.textLabel.text = [items[indexPath.row] firstObject];
     return cell;
 }
+
 @end

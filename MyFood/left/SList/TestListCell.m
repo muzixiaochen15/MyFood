@@ -11,6 +11,10 @@
 #import "View+MASAdditions.h"
 #import "EQXColor.h"
 
+@interface TestListCell (){
+    UIButton *button;
+}
+@end
 @implementation TestListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -30,6 +34,13 @@
     _listTitleLabel.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:_listTitleLabel];
     [_listTitleLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(5.0f, 20.0f, 5.0f, 100.0f)];
+    
+    button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.translatesAutoresizingMaskIntoConstraints = NO;
+    button.backgroundColor = [UIColor blueColor];
+    [self addSubview:button];
+    [button autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(10.0f, 10.0f, 10.0f, 10.0f) excludingEdge:ALEdgeRight];
+    [button autoSetDimension:ALDimensionWidth toSize:60.0f];
 }
 - (void)addProcessView{
     self.proview = [UIProgressView new];
@@ -50,5 +61,10 @@
         make.width.equalTo(@50);
         make.height.equalTo(@11);
     }];
+}
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
+    if (highlighted) {
+        button.backgroundColor = [UIColor blueColor];
+    }
 }
 @end
