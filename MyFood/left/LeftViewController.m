@@ -98,7 +98,7 @@
     [self.tableView registerClass:[MenuTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.rowHeight = 50.f;
+    self.tableView.rowHeight = 100.f;
 }
 
 - (NSString *)titleForRowAtIndexPath:(NSIndexPath *)indexPath

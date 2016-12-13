@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface BokeDetailViewController : UIViewController
+@interface BokeDetailViewController : UIViewController<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>
 @property (nonatomic, strong) NSString *urlString;
 @end

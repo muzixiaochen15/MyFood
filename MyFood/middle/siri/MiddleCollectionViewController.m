@@ -60,20 +60,26 @@
     }];
 }
 - (void)parseJsonDic:(NSDictionary *)jsonDic withUrl:(NSString *)url{
-    if (jsonDic[@"result"][@"data"] > 0) {
-        NSDictionary *dic = jsonDic[@"result"][@"data"][0];
-        NSArray *typeArray = dic.allKeys;
-        for (NSString *num in typeArray) {
-            FunnyTypeItem *item = [[FunnyTypeItem alloc]init];
-            item.id = num;
-            item.title = dic[num];
-            NSArray *temArray = @[item, [JuHeTableViewController class]];
-            [_items addObject:temArray];
+    if (jsonDic) {
+        NSArray *result = jsonDic[@"result"];
+        if (result&&result.count > 0) {
+            NSArray *dataArray = jsonDic[@"result"][@"data"];
+            if (dataArray&&dataArray.count > 0) {
+                NSDictionary *dic = jsonDic[@"result"][@"data"][0];
+                NSArray *typeArray = dic.allKeys;
+                for (NSString *num in typeArray) {
+                    FunnyTypeItem *item = [[FunnyTypeItem alloc]init];
+                    item.id = num;
+                    item.title = dic[num];
+                    NSArray *temArray = @[item, [JuHeTableViewController class]];
+                    [_items addObject:temArray];
+                }
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self configureViews];
+            });
         }
     }
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self configureViews];
-    });
 }
 - (EQXRequest *)request{
     if (!_request) {

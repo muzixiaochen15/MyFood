@@ -10,12 +10,16 @@
 #import "UIColor+CustomColors.h"
 #import "POPBasicAnimation.h"
 #import "POPSpringAnimation.h"
+#import <PureLayout/PureLayout.h>
 
 @implementation MenuTableViewCell
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        _showCharLabel = [UILabel newAutoLayoutView];
+        _showCharLabel.backgroundColor = [UIColor clearColor];
+        [self addSubview:_showCharLabel];
         self.textLabel.textColor = [UIColor customGrayColor];
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         self.selectionStyle = UITableViewCellSelectionStyleNone;

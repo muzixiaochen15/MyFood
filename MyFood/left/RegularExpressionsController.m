@@ -73,6 +73,8 @@
     
     _regularExpField = [UITextField newAutoLayoutView];
     _regularExpField.placeholder = @"正则表达式";
+    _regularExpField.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 15, 30.0f)];
+    _regularExpField.leftViewMode = UITextFieldViewModeAlways;
     _regularExpField.borderStyle = UITextBorderStyleRoundedRect;
     _regularExpField.backgroundColor = [UIColor clearColor];
     _regularExpField.textAlignment = NSTextAlignmentLeft;
@@ -172,5 +174,8 @@
             break;
     }
     _regularExpField.text = pattern;
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 @end

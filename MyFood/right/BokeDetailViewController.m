@@ -9,16 +9,24 @@
 #import "BokeDetailViewController.h"
 #import "EQXColor.h"
 #import "PureLayout/PureLayout.h"
-#import <WebKit/WebKit.h>
 #import "SNLoading.h"
 
-@interface BokeDetailViewController ()<WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate>{
+@interface BokeDetailViewController (){
     WKWebView *_webView;
     CGFloat _currentOffsetY;
 }
 @end
 
 @implementation BokeDetailViewController
+- (void)dealloc{
+    _webView = nil;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    if (_webView) {
+        [_webView stopLoading];
+    }
+    [super viewWillDisappear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +53,6 @@
     _webView.navigationDelegate = self;
     _webView.UIDelegate = self;
     _webView.backgroundColor = [EQXColor colorWithHexString:@"#f4f4f4"];
-    _webView.navigationDelegate = self;
     [self.view addSubview:_webView];
     [_webView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f)];
     
@@ -107,14 +114,18 @@
 }
 // 在收到响应后，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
-    decisionHandler(WKNavigationResponsePolicyAllow);
+    if (webView) {
+        decisionHandler(WKNavigationResponsePolicyAllow);
+    }
 }
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
     [SNLoading showWithTitle:@"正在加载..."];
 }
 // 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    self.title = webView.title;
+    if (webView) {
+        self.title = webView.title;
+    }
     [SNLoading hideWithTitle:@"加载完成"];
 }
 // 页面加载失败时调用
@@ -123,7 +134,9 @@
 }
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
-    decisionHandler(WKNavigationActionPolicyAllow);
+    if (webView) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
 }
 
 @end

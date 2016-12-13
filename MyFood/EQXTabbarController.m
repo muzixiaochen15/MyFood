@@ -44,6 +44,7 @@
     
     BokeListViewController *rightVC = [[BokeListViewController alloc]init];
     [rightVC.view setBackgroundColor:[EQXColor colorWithHexString:@"#f8f8f8"]];
+    
     UINavigationController *rightNav = [[UINavigationController alloc]initWithRootViewController:rightVC];
     [rightNav.navigationBar setBarTintColor:[EQXColor colorWithHexString:@"#e13e3f"]];
     rightNav.navigationBar.tintColor = [UIColor whiteColor];

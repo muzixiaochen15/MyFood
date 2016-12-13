@@ -9,4 +9,6 @@ pod 'PINCache', '~> 3.0.1-beta'
 pod 'FMDB', '~> 2.6.2'
 #pod 'ZSSRichTextEditor', '~> 0.3'
 pod 'Reachability', '~> 3.2'
+pod 'YYText', '~> 1.0.7'
+pod 'YYImage', '~> 1.0.4'
 end

@@ -44,6 +44,7 @@
      *  在此事件中写入连接代码。第四个参数则为配置本地社交平台时触发，根据返回的平台类型来配置平台信息。
      *  如果您使用的时服务端托管平台信息时，第二、四项参数可以传入nil，第三项参数则根据服务端托管平台来决定要连接的社交SDK。
      */
+#if !TARGET_OS_SIMULATOR
     [ShareSDK registerApp:@"177fa8b9e4568"
      
           activePlatforms:@[
@@ -92,6 +93,7 @@
                  break;
          }
      }];
+#endif
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

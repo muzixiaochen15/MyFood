@@ -10,4 +10,7 @@
 
 @interface MenuTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UILabel *showCharLabel;
+@property (nonatomic, strong) UILabel *menuTitleLabel;
+
 @end
