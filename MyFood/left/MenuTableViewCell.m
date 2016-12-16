@@ -18,12 +18,29 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _showCharLabel = [UILabel newAutoLayoutView];
-        _showCharLabel.backgroundColor = [UIColor clearColor];
+        _showCharLabel.backgroundColor = [UIColor lightGrayColor];
+        _showCharLabel.textColor = [UIColor whiteColor];
+        _showCharLabel.textAlignment = NSTextAlignmentCenter;
+        _showCharLabel.font = [UIFont boldSystemFontOfSize:80];
         [self addSubview:_showCharLabel];
-        self.textLabel.textColor = [UIColor customGrayColor];
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.textLabel.font = [UIFont fontWithName:@"Avenir-Light" size:16];
+        [_showCharLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 20.0f) excludingEdge:ALEdgeRight];
+        [_showCharLabel autoSetDimension:ALDimensionWidth toSize:100.0f];
+        
+        _menuTitleLabel = [UILabel newAutoLayoutView];
+        _menuTitleLabel.backgroundColor = [UIColor clearColor];
+        _menuTitleLabel.textColor = [UIColor lightGrayColor];
+        _menuTitleLabel.textAlignment = NSTextAlignmentLeft;
+        _menuTitleLabel.numberOfLines = 0;
+        _menuTitleLabel.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+        [self addSubview:_menuTitleLabel];
+        [_menuTitleLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0.0f, 120.0f, 0.0f, 20.0f)];
+        
+//        self.textLabel.textColor = [UIColor customGrayColor];
+//        self.textLabel.userInteractionEnabled = NO;
+//        self.textLabel.backgroundColor = [UIColor clearColor];
+//        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//        self.selectionStyle = UITableViewCellSelectionStyleNone;
+//        self.textLabel.font = [UIFont fontWithName:@"Avenir-Light" size:16];
     }
     return self;
 }

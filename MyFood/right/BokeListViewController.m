@@ -8,7 +8,7 @@
 
 #import "BokeListViewController.h"
 #import "EQXColor.h"
-#import "MenuTableViewCell.h"
+//#import "MenuTableViewCell.h"
 #import "BokeDetailViewController.h"
 #import "UIView+PS.h"
 #import <PureLayout/PureLayout.h>
@@ -64,7 +64,7 @@
     
     [_headImageView addSubview:self.tipBellBtn];
     [_tipBellBtn autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:20.0f];
-    [_tipBellBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0.0f];
+    [_tipBellBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10.0f];
     [_tipBellBtn autoSetDimensionsToSize:CGSizeMake(40.0f, 40.0f)];
     
     self.avatarView.centerX = self.headBackView.centerX;
@@ -180,8 +180,8 @@
               @[@"网页8", [BokeDetailViewController class]],
               @[@"网页9", [BokeDetailViewController class]]
               ];
-    [self.tableView registerClass:[MenuTableViewCell class]
-           forCellReuseIdentifier:NSStringFromClass([MenuTableViewCell class])];
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.rowHeight = 50.0f;
 }
@@ -290,7 +290,7 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MenuTableViewCell class])
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])
                                                               forIndexPath:indexPath];
     cell.textLabel.text = [items[indexPath.row] firstObject];
     return cell;

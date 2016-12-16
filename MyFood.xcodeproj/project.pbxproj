@@ -33,6 +33,7 @@
 		6B2CAEEB1D597FF80007A131 /* EGORefreshTablLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CAEDD1D597FF80007A131 /* EGORefreshTablLeftView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6B2CAEF31D59B98E0007A131 /* cryingFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */; };
 		6B2CAEF71D59C4350007A131 /* 背景图@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2CAEF61D59C4350007A131 /* 背景图@2x.png */; };
+		6B367F661E02A09C00C62DD6 /* UIView+ClickAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B367F651E02A09C00C62DD6 /* UIView+ClickAction.m */; };
 		6B370BE61D9A1E0400829E88 /* duanzi_button_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B370BDD1D9A1E0400829E88 /* duanzi_button_normal@2x.png */; };
 		6B370BE71D9A1E0400829E88 /* duanzi_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B370BDE1D9A1E0400829E88 /* duanzi_down@2x.png */; };
 		6B370BE81D9A1E0400829E88 /* duanzi_down_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B370BDF1D9A1E0400829E88 /* duanzi_down_selected@2x.png */; };
@@ -220,6 +221,8 @@
 		6B2CAEDE1D597FF80007A131 /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
 		6B2CAEF21D59B98E0007A131 /* cryingFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cryingFace@2x.png"; sourceTree = "<group>"; };
 		6B2CAEF61D59C4350007A131 /* 背景图@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景图@2x.png"; sourceTree = "<group>"; };
+		6B367F641E02A09C00C62DD6 /* UIView+ClickAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ClickAction.h"; sourceTree = "<group>"; };
+		6B367F651E02A09C00C62DD6 /* UIView+ClickAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ClickAction.m"; sourceTree = "<group>"; };
 		6B370BDD1D9A1E0400829E88 /* duanzi_button_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanzi_button_normal@2x.png"; sourceTree = "<group>"; };
 		6B370BDE1D9A1E0400829E88 /* duanzi_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanzi_down@2x.png"; sourceTree = "<group>"; };
 		6B370BDF1D9A1E0400829E88 /* duanzi_down_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanzi_down_selected@2x.png"; sourceTree = "<group>"; };
@@ -626,6 +629,8 @@
 				6B1133811DF7DE360048522D /* BokeListViewController.m */,
 				6B4BEA5D1DFFA85000CD430F /* BindPhoneTip.h */,
 				6B4BEA5E1DFFA85000CD430F /* BindPhoneTip.m */,
+				6B367F641E02A09C00C62DD6 /* UIView+ClickAction.h */,
+				6B367F651E02A09C00C62DD6 /* UIView+ClickAction.m */,
 			);
 			path = right;
 			sourceTree = "<group>";
@@ -1551,6 +1556,7 @@
 				6B01BDBC1D7E5D5B0001B6AD /* VideoViewController.m in Sources */,
 				6B56A1811D6E7EA400B1C3BC /* MFConstClass.m in Sources */,
 				6B1FB6941D8E2F110028830A /* EQXRequest.m in Sources */,
+				6B367F661E02A09C00C62DD6 /* UIView+ClickAction.m in Sources */,
 				6BCABBE01D66E6B20007BED8 /* MASViewConstraint.m in Sources */,
 				6B7394A31DF68E5E001951BE /* NSOperationDemoController.m in Sources */,
 				6B54EE1A1D73C86B00709467 /* ListTestViewController.m in Sources */,

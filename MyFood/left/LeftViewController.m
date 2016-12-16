@@ -76,7 +76,11 @@
 {
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier
                                                               forIndexPath:indexPath];
-    cell.textLabel.text = [self.items[indexPath.row] firstObject];
+//    cell.textLabel.text = [self.items[indexPath.row] firstObject];
+    if ([[self.items[indexPath.row] firstObject] length] > 0) {
+        cell.showCharLabel.text = [[self.items[indexPath.row] firstObject] substringToIndex:1];
+        cell.menuTitleLabel.text = [self.items[indexPath.row] firstObject];
+    }
     return cell;
 }
 #pragma mark - Private Instance methods
